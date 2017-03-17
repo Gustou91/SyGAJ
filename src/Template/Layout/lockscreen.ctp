@@ -54,10 +54,6 @@
   <div class="text-center">
     <a href="<?php echo $this->Url->build('/pages/examples/login'); ?>">Or sign in as a different user</a>
   </div>
-  <div class="lockscreen-footer text-center">
-    Copyright &copy; 2014-2015 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>
-    All rights reserved
-  </div>
 </div>
 <!-- /.center -->
 
