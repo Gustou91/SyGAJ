@@ -18,9 +18,7 @@ class MembresController extends AppController
      {
         $membres = $this->Membres->find('all');
         $this->set('membres', $this->Membres->find('all'));
-        //$this->set(compact('users'));
-/*        debug($users);
-        die();*/
+
     }
 
     
@@ -31,15 +29,15 @@ class MembresController extends AppController
     }
 
 
-    // Ajout d'un utilisateur.
+    // Ajout d'un membre.
     public function add()
     {
+        
         $membre = $this->Membres->newEntity();
         if ($this->request->is('post')) {
  
-            $membre = $this->Membres->patchEntity($membre, $this->request->data);
-            debug($membre);
-            debug($this->Membres);
+            $membre = $this->Membres->patchEntity($membre, $this->request->data, ['validate' => true]);
+
 
             if ($this->Membres->save($membre)) {
                 $this->Flash->success(__("Le membre a été sauvegardé."));
@@ -48,15 +46,16 @@ class MembresController extends AppController
             $this->Flash->error(__("Impossible d'ajouter le membre."));
         }
         $this->set('membre', $membre);
+
     }
 
 
-    // Suppression d'un utilisateur.
+    // Suppression d'un membre.
     public function delete($id)
     {
-        // Chargement de l'uilisateur à supprimer.
+        // Chargement du membre à supprimer.
         $membre = $this->Membres->get($id);
-        // Suppresion de l'utilisateur.
+        // Suppresion du membre.
         $this->Membres->delete($membre);
 
         // Redirection vers index.

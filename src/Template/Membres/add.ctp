@@ -18,15 +18,14 @@
 	        <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
         		<?= $this->Form->input('mem_datnaiss', 
-        								array('label' => false, 
-        									  'placeholder' => 'Né(e) le', 
-        									  'class' => 'form-control', 
-        									  'type' => 'text',
-        									  'data-inputmask' => "'alias': 'dd/mm/yyyy'",
-        									  'data-mask' => '')) ?>
+        			array('label' => false, 
+        				  'placeholder' => 'Date de naissance', 
+        				  'class' => 'form-control', 
+        				  'type' => 'date',
+        				  'minyear' => '1917',
+        				  'maxyear' => '2017')) ?>
 	        </div>
 	        <br>
-
 	        <div class="input-group">
 	        	<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 	        	<?= $this->Form->input('mem_mail', array('label' => false, 
@@ -51,10 +50,52 @@
 		        echo $this->Form->select('mem_ceinture', $ceintures); ?>				
             </div>
 	        <br>
-
+	        <div class="input-group">
+	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<?= $this->Form->input('mem_adr1', array('label' => false, 
+	        											 'placeholder' => 'Adresse ligne 1', 
+	        											 'type' => 'text', 
+	        											 'class' => 'form-control')) ?>
+	        </div>
+	        <br>
+	        <div class="input-group">
+	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<?= $this->Form->input('mem_adr2', array('label' => false, 
+	        											 'placeholder' => 'Adresse ligne 2', 
+	        											 'type' => 'text', 
+	        											 'class' => 'form-control')) ?>
+	        </div>
+	        <br>
+	        <div class="input-group">
+	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<?= $this->Form->input('mem_cp', array('label' => false, 
+	        											 'placeholder' => 'Code postal', 
+	        											 'type' => 'text', 
+	        											 'class' => 'form-control')) ?>
+	        </div>
+	        <br>
+	        <div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-tint"></i></span>
+		        <?php $villes = array('91290' => 'Arpajon', 
+										'91200' => 'Athis-Mons',
+										'91630' => 'Avrainville',
+										'91630' => 'Ballainvilliers',
+										'91610' => 'Ballancourt-sur-Essonne',
+										'91570' => 'Bièvres',
+										'91590' => 'Boissy-le-Cutté',
+										'91870' => 'Boissy-le-Sec',
+										'91070' => 'Bondoufle',
+										'91850' => 'Bourray-Sur-Juine',
+										'91220' => 'Brétigny-sur-Orges',
+										'91630' => 'Cheptainville',
+										'91630' => 'Marolles-en-Hurepoix');
+		        echo $this->Form->select('mem_ville', $villes); ?>				
+            </div>
+	        <br>
 	    </fieldset>
 	<?= $this->Form->button(__('Ajouter')); ?>
 	<?= $this->Form->end() ?>
 	</div>
 
 </div>
+

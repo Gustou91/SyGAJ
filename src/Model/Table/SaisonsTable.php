@@ -4,17 +4,14 @@ namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-class MembresTable extends Table
+class SaisonsTable extends Table
 {
-
 
     public function validationDefault(Validator $validator)
     {
         return $validator
-            ->notEmpty('mem_nom', "Le nom est obligatoire.")
-            ->notEmpty('mem_prenom', 'Le prénom est obligatoire.')
-            ->notEmpty('mem_datnaiss', 'Un role est nécessaire')
-            ->email('mem_mail');
+            ->notEmpty('sai_nom', "Le nom de la saison est obligatoire (ex: 2017-2018)");
+
     }
 
 
