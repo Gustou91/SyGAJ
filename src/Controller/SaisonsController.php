@@ -18,7 +18,8 @@ class SaisonsController extends AppController
      public function index()
      {
         $saisons = $this->Saisons->find('all');
-        $this->set('saisons', $this->Saisons->find('all'));
+        $this->set('saisons', $this->Saisons->find('all', array(
+            'order' => array('Saisons.sai_nom' => 'asc'))));
 
     }
 
@@ -29,6 +30,22 @@ class SaisonsController extends AppController
         $this->set(compact('saison'));
     }
 
+    
+    public function edit($id = null)
+    {
+        $saison = $this->Saisons->get($id);
+        if ($this->request->is(['post', 'put'])) {
+           $this->Saisons->patchEntity($saison, $this->request->data);
+            if ($this->Saisons->save($saison)) {
+                $this->Flash->success(__('La saison a été sauvegardé.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__("Impossible d'enregistrer la saison."));
+        }
+
+        $this->set('saison', $saison);
+
+    }
 
     // Ajout d'une saison.
     public function add()
@@ -54,9 +71,9 @@ class SaisonsController extends AppController
     // Suppression d'une saison.
     public function delete($id)
     {
-        // Chargement de l'uilisateur à supprimer.
+        // Chargement de la saison à supprimer.
         $saison = $this->Saisons->get($id);
-        // Suppresion de l'utilisateur.
+        // Suppresion de la saison.
         $this->Saisons->delete($saison);
 
         // Redirection vers index.

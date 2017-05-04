@@ -30,6 +30,23 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+    
+    public function edit($id = null)
+    {
+        $user = $this->Users->get($id);
+        if ($this->request->is(['post', 'put'])) {
+           $this->Users->patchEntity($user, $this->request->data);
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__("L'utilisateur a été sauvegardé."));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__("Impossible d'enregistrer l'utilisateur."));
+        }
+
+        $this->set('user', $user);
+
+    }
+
 
     // Ajout d'un utilisateur.
     public function add()

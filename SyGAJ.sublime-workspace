@@ -40,57 +40,28 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\nnamespace App\\Controller;\n\nuse App\\Controller\\AppController;\n\nclass LoginController extends AppController\n{\n\n\tpublic $components = array('Session', 'Cookie', 'Auth');\n\n\t/* Frmulaire d'identification */\n\tpublic function index()\n    {\n    \t$this->viewBuilder()->layout('login');\n    }\n\n    /* Ajout d'un nouvel utilisateur */\n    public function add()\n    {\n\n    }\n\n    \n    public function view()\n    {\n    \t$users = $this->user->find('all');\n    \t$this->set(compact('users'));\n    }\n\n    public function edit()\n    {\n\n    }\n}",
-			"file": "src/Controller/LoginController.php",
-			"file_size": 482,
-			"file_write_time": 131325989631307897,
-			"settings":
-			{
-				"buffer_size": 531,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Template/Users/add.ctp",
-			"settings":
-			{
-				"buffer_size": 1972,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Template/Users/edit.ctp",
-			"settings":
-			{
-				"buffer_size": 925,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Model/Table/UsersTable.php",
-			"settings":
-			{
-				"buffer_size": 771,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Model/Table/MembresTable.php",
-			"settings":
-			{
-				"buffer_size": 626,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/Template/Membres/add.ctp",
 			"settings":
 			{
-				"buffer_size": 4235,
+				"buffer_size": 4032,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Saisons/add.ctp",
+			"settings":
+			{
+				"buffer_size": 600,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Controller/SaisonsController.php",
+			"settings":
+			{
+				"buffer_size": 1563,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -99,44 +70,8 @@
 			"file": "src/Controller/MembresController.php",
 			"settings":
 			{
-				"buffer_size": 1650,
+				"buffer_size": 1546,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Template/Membres/index.ctp",
-			"settings":
-			{
-				"buffer_size": 2397,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 5058 files for \"2014-2015\" (case sensitive)\n\nC:\\wamp64\\www\\SyGAJ\\src\\Template\\Element\\footer.ctp:\n   12          <b>Version</b> 2.3.2\n   13      </div>\n   14:     <strong>Copyright &copy; 2014-2015 <a href=\"http://almsaeedstudio.com\">Almsaeed Studio</a>.</strong> All rights\n   15      reserved.\n   16  </footer>\n\nC:\\wamp64\\www\\SyGAJ\\src\\Template\\Layout\\lockscreen.ctp:\n   56    </div>\n   57    <div class=\"lockscreen-footer text-center\">\n   58:     Copyright &copy; 2014-2015 <b><a href=\"http://almsaeedstudio.com\" class=\"text-black\">Almsaeed Studio</a></b><br>\n   59      All rights reserved\n   60    </div>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\src\\Template\\Element\\footer.ctp:\n   12          <b>Version</b> 2.3.2\n   13      </div>\n   14:     <strong>Copyright &copy; 2014-2015 <a href=\"http://almsaeedstudio.com\">Almsaeed Studio</a>.</strong> All rights\n   15      reserved.\n   16  </footer>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\src\\Template\\Layout\\lockscreen.ctp:\n   56    </div>\n   57    <div class=\"lockscreen-footer text-center\">\n   58:     Copyright &copy; 2014-2015 <b><a href=\"http://almsaeedstudio.com\" class=\"text-black\">Almsaeed Studio</a></b><br>\n   59      All rights reserved\n   60    </div>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.js:\n    1  /*! Responsive 1.0.6\n    2:  * 2014-2015 SpryMedia Ltd - datatables.net/license\n    3   */\n    4  \n    .\n   10   * @author      SpryMedia Ltd (www.sprymedia.co.uk)\n   11   * @contact     www.sprymedia.co.uk/contact\n   12:  * @copyright   Copyright 2014-2015 SpryMedia Ltd.\n   13   *\n   14   * This source file is free software, available under the following license:\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.min.js:\n    1  /*!\n    2   Responsive 1.0.6\n    3:  2014-2015 SpryMedia Ltd - datatables.net/license\n    4  */\n    5  (function(n,p){var o=function(e,k){var h=function(d,a){if(!k.versionCheck||!k.versionCheck(\"1.10.1\"))throw\"DataTables Responsive requires DataTables 1.10.1 or newer\";this.s={dt:new k.Api(d),columns:[]};this.s.dt.settings()[0].responsive||(a&&\"string\"===typeof a.details&&(a.details={type:a.details}),this.c=e.extend(!0,{},h.defaults,k.defaults.responsive,a),d.responsive=this,this._constructor())};h.prototype={_constructor:function(){var d=this,a=this.s.dt;a.settings()[0]._responsive=this;e(n).on(\"resize.dtr orientationchange.dtr\",\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\License.txt:\n    1: Copyright (c) 2014-2015 SpryMedia Limited\n    2  http://datatables.net\n    3  \n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.js:\n    1  /*! Responsive 1.0.6\n    2:  * 2014-2015 SpryMedia Ltd - datatables.net/license\n    3   */\n    4  \n    .\n   10   * @author      SpryMedia Ltd (www.sprymedia.co.uk)\n   11   * @contact     www.sprymedia.co.uk/contact\n   12:  * @copyright   Copyright 2014-2015 SpryMedia Ltd.\n   13   *\n   14   * This source file is free software, available under the following license:\n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.min.js:\n    1  /*!\n    2   Responsive 1.0.6\n    3:  2014-2015 SpryMedia Ltd - datatables.net/license\n    4  */\n    5  (function(n,p){var o=function(e,k){var h=function(d,a){if(!k.versionCheck||!k.versionCheck(\"1.10.1\"))throw\"DataTables Responsive requires DataTables 1.10.1 or newer\";this.s={dt:new k.Api(d),columns:[]};this.s.dt.settings()[0].responsive||(a&&\"string\"===typeof a.details&&(a.details={type:a.details}),this.c=e.extend(!0,{},h.defaults,k.defaults.responsive,a),d.responsive=this,this._constructor())};h.prototype={_constructor:function(){var d=this,a=this.s.dt;a.settings()[0]._responsive=this;e(n).on(\"resize.dtr orientationchange.dtr\",\n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\License.txt:\n    1: Copyright (c) 2014-2015 SpryMedia Limited\n    2  http://datatables.net\n    3  \n\n12 matches across 10 files\n\n\nSearching 5058 files for \"2014-2015\" (case sensitive)\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\src\\Template\\Element\\footer.ctp:\n   12          <b>Version</b> 2.3.2\n   13      </div>\n   14:     <strong>Copyright &copy; 2014-2015 <a href=\"http://almsaeedstudio.com\">Almsaeed Studio</a>.</strong> All rights\n   15      reserved.\n   16  </footer>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\src\\Template\\Layout\\lockscreen.ctp:\n   56    </div>\n   57    <div class=\"lockscreen-footer text-center\">\n   58:     Copyright &copy; 2014-2015 <b><a href=\"http://almsaeedstudio.com\" class=\"text-black\">Almsaeed Studio</a></b><br>\n   59      All rights reserved\n   60    </div>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.js:\n    1  /*! Responsive 1.0.6\n    2:  * 2014-2015 SpryMedia Ltd - datatables.net/license\n    3   */\n    4  \n    .\n   10   * @author      SpryMedia Ltd (www.sprymedia.co.uk)\n   11   * @contact     www.sprymedia.co.uk/contact\n   12:  * @copyright   Copyright 2014-2015 SpryMedia Ltd.\n   13   *\n   14   * This source file is free software, available under the following license:\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.min.js:\n    1  /*!\n    2   Responsive 1.0.6\n    3:  2014-2015 SpryMedia Ltd - datatables.net/license\n    4  */\n    5  (function(n,p){var o=function(e,k){var h=function(d,a){if(!k.versionCheck||!k.versionCheck(\"1.10.1\"))throw\"DataTables Responsive requires DataTables 1.10.1 or newer\";this.s={dt:new k.Api(d),columns:[]};this.s.dt.settings()[0].responsive||(a&&\"string\"===typeof a.details&&(a.details={type:a.details}),this.c=e.extend(!0,{},h.defaults,k.defaults.responsive,a),d.responsive=this,this._constructor())};h.prototype={_constructor:function(){var d=this,a=this.s.dt;a.settings()[0]._responsive=this;e(n).on(\"resize.dtr orientationchange.dtr\",\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\maiconpinto\\cakephp-adminlte-theme\\webroot\\plugins\\datatables\\extensions\\Responsive\\License.txt:\n    1: Copyright (c) 2014-2015 SpryMedia Limited\n    2  http://datatables.net\n    3  \n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.js:\n    1  /*! Responsive 1.0.6\n    2:  * 2014-2015 SpryMedia Ltd - datatables.net/license\n    3   */\n    4  \n    .\n   10   * @author      SpryMedia Ltd (www.sprymedia.co.uk)\n   11   * @contact     www.sprymedia.co.uk/contact\n   12:  * @copyright   Copyright 2014-2015 SpryMedia Ltd.\n   13   *\n   14   * This source file is free software, available under the following license:\n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\js\\dataTables.responsive.min.js:\n    1  /*!\n    2   Responsive 1.0.6\n    3:  2014-2015 SpryMedia Ltd - datatables.net/license\n    4  */\n    5  (function(n,p){var o=function(e,k){var h=function(d,a){if(!k.versionCheck||!k.versionCheck(\"1.10.1\"))throw\"DataTables Responsive requires DataTables 1.10.1 or newer\";this.s={dt:new k.Api(d),columns:[]};this.s.dt.settings()[0].responsive||(a&&\"string\"===typeof a.details&&(a.details={type:a.details}),this.c=e.extend(!0,{},h.defaults,k.defaults.responsive,a),d.responsive=this,this._constructor())};h.prototype={_constructor:function(){var d=this,a=this.s.dt;a.settings()[0]._responsive=this;e(n).on(\"resize.dtr orientationchange.dtr\",\n\nC:\\wamp64\\www\\SyGAJ\\webroot\\plugins\\datatables\\extensions\\Responsive\\License.txt:\n    1: Copyright (c) 2014-2015 SpryMedia Limited\n    2  http://datatables.net\n    3  \n\n10 matches across 8 files\n\n\nSearching 5058 files for \"cake.icon.png\" (case sensitive)\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\debug_kit\\src\\Template\\Element\\packages_panel.ctp:\n   97  \n   98          function buildLoader() {\n   99:             return '<div class=\"loading\">Loading <?= $this->Html->image('DebugKit.cake.icon.png', ['class' => 'indicator'])?></div>';\n  100          }\n  101  \n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\debug_kit\\src\\Template\\Layout\\toolbar.ctp:\n   14      <?= $this->fetch('content') ?>\n   15      <div id=\"loader\">\n   16:         <?= $this->Html->image('DebugKit.cake.icon.png', ['class' => 'indicator'])?>\n   17      </div>\n   18      </body>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\debug_kit\\src\\Template\\Requests\\view.ctp:\n   30      <?php endforeach; ?>\n   31      <li id=\"panel-button\">\n   32:         <?= $this->Html->image('DebugKit.cake.icon.png', [\n   33              'alt' => 'Debug Kit', 'title' => 'CakePHP ' . Configure::version() . ' Debug Kit'\n   34          ]) ?>\n\n3 matches across 3 files\n",
-			"settings":
-			{
-				"buffer_size": 8841,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
-			"settings":
-			{
-				"buffer_size": 234,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Template/Pages/forms/general.ctp",
-			"settings":
-			{
-				"buffer_size": 15630,
 				"line_ending": "Windows"
 			}
 		},
@@ -144,8 +79,25 @@
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 			"settings":
 			{
-				"buffer_size": 9244,
+				"buffer_size": 9993,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Template/Saisons/index.ctp",
+			"settings":
+			{
+				"buffer_size": 1281,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/app.php",
+			"settings":
+			{
+				"buffer_size": 13776,
 				"line_ending": "Unix"
 			}
 		},
@@ -205,21 +157,35 @@
 	"expanded_folders":
 	[
 		"/C/wamp64/www/SyGAJ",
+		"/C/wamp64/www/SyGAJ/config",
 		"/C/wamp64/www/SyGAJ/src",
+		"/C/wamp64/www/SyGAJ/src/Controller",
 		"/C/wamp64/www/SyGAJ/src/Model",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity",
 		"/C/wamp64/www/SyGAJ/src/Model/Table",
 		"/C/wamp64/www/SyGAJ/src/Template",
-		"/C/wamp64/www/SyGAJ/src/Template/Layout",
-		"/C/wamp64/www/SyGAJ/src/Template/Membres",
+		"/C/wamp64/www/SyGAJ/src/Template/Saisons",
 		"/C/wamp64/www/SyGAJ/src/View",
 		"/C/wamp64/www/SyGAJ/vendor",
-		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src",
-		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template",
-		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template/Requests"
+		"/C/wamp64/www/SyGAJ/vendor/cakephp",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/SyGAJ/src/Model/Table/UsersTable.php",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/SaisonsTable.php",
+		"/C/wamp64/www/SyGAJ/src/Model/Entity/saison.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/MembresController.php",
+		"/C/wamp64/www/SyGAJ/src/Model/Entity/membre.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Membres/index.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Pages/forms/general.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Users/edit.ctp",
+		"/C/wamp64/www/SyGAJ/src/Controller/LoginController.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/MembresTable.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/UsersController.php",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template/Requests/view.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template/Layout/toolbar.ctp",
@@ -238,7 +204,6 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Users/login.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Login/index.ctp",
 		"/C/Users/bgarcin/AppData/Roaming/Sublime Text 3/Packages/User/snippet_php_echo.sublime-snippet",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Element/nav-top.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/View/Helper.php",
@@ -252,7 +217,6 @@
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-main-sidebar.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/form.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-control-sidebar.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/README.md",
 		"/C/wamp64/bin/apache/apache2.4.23/bin/php.ini",
@@ -360,54 +324,53 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Controller/LoginController.php",
+					"file": "src/Template/Membres/add.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 531,
+						"buffer_size": 4032,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								0,
+								4032
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/Template/Users/add.ctp",
+					"file": "src/Template/Saisons/add.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1972,
+						"buffer_size": 600,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								879,
-								879
+								285,
+								285
 							]
 						],
 						"settings":
@@ -419,58 +382,28 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/Template/Users/edit.ctp",
+					"file": "src/Controller/SaisonsController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 925,
+						"buffer_size": 1563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								925
+								371,
+								371
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/Model/Table/UsersTable.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								771
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -479,24 +412,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/Model/Table/MembresTable.php",
+					"buffer": 3,
+					"file": "src/Controller/MembresController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 626,
+						"buffer_size": 1546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								160,
-								143
+								370,
+								370
 							]
 						],
 						"settings":
@@ -513,257 +446,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/Template/Membres/add.ctp",
+					"buffer": 4,
+					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4235,
+						"buffer_size": 9993,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1269,
-								1269
+								1403,
+								1403
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/Controller/MembresController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1650,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1097,
-								1102
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 513.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/Template/Membres/index.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2397,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1264,
-								1264
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8841,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										198,
-										207
-									],
-									[
-										477,
-										486
-									],
-									[
-										806,
-										815
-									],
-									[
-										1127,
-										1136
-									],
-									[
-										1449,
-										1458
-									],
-									[
-										1666,
-										1675
-									],
-									[
-										1974,
-										1983
-									],
-									[
-										2721,
-										2730
-									],
-									[
-										2923,
-										2932
-									],
-									[
-										3140,
-										3149
-									],
-									[
-										3406,
-										3415
-									],
-									[
-										4111,
-										4120
-									],
-									[
-										4446,
-										4455
-									],
-									[
-										4767,
-										4776
-									],
-									[
-										5089,
-										5098
-									],
-									[
-										5306,
-										5315
-									],
-									[
-										5614,
-										5623
-									],
-									[
-										6361,
-										6370
-									],
-									[
-										6563,
-										6572
-									],
-									[
-										6780,
-										6789
-									],
-									[
-										7046,
-										7055
-									],
-									[
-										7751,
-										7760
-									],
-									[
-										8127,
-										8140
-									],
-									[
-										8402,
-										8415
-									],
-									[
-										8675,
-										8688
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								7845,
-								7845
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 3,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2850.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 234,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								213,
-								213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -773,67 +476,67 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "src/Template/Pages/forms/general.ctp",
+					"buffer": 5,
+					"file": "src/Template/Saisons/index.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15630,
+						"buffer_size": 1281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4381,
-								4610
+								847,
+								847
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1810.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
-					"semi_transient": false,
+					"buffer": 6,
+					"file": "config/app.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 9244,
+						"buffer_size": 13776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4219,
-								4239
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1088.0,
+						"translation.y": 3933.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 7,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 					"semi_transient": false,
 					"settings":
@@ -856,10 +559,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 125.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

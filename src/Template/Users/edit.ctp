@@ -20,8 +20,18 @@
 				        ]) ?>
 	        	</div>
 	        </div>
+	        <div class="row">
+	        	<div class="col-md-6">
+		        <?= $this->Form->input('firstname', array('label' => 'Prénom', 'placeholder' => 'Prénom')) ?>
+	        	</div>
+	        </div>
+	        <div class="row">
+	        	<div class="col-md-6">
+		        <?= $this->Form->input('lastname', array('label' => 'Nom', 'placeholder' => 'Nom')) ?>
+	        	</div>
+	        </div>
 	    </fieldset>
-	<?= $this->Form->button(__('Ajouter')); ?>
+	<?= $this->Form->button(__('Enregistrer')); ?>
 	<?= $this->Form->end() ?>
 	</div>
 </section>

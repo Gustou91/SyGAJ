@@ -28,6 +28,22 @@ class MembresController extends AppController
         $this->set(compact('membre'));
     }
 
+    
+    public function edit($id = null)
+    {
+        $membre = $this->Membres->get($id);
+        if ($this->request->is(['post', 'put'])) {
+           $this->Membres->patchEntity($membre, $this->request->data);
+            if ($this->Membres->save($membre)) {
+                $this->Flash->success(__("Le membre a été sauvegardé."));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__("Impossible d'enregistrer le membre."));
+        }
+
+        $this->set('membre', $membre);
+
+    }
 
     // Ajout d'un membre.
     public function add()
