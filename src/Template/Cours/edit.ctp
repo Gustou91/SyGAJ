@@ -4,6 +4,7 @@
 	<div class="form">
 	<?= $this->Form->create($cours) ?>
 	    <fieldset>
+	        <legend><?= __('Modifier un cours') ?></legend>
 	        <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
         		<?= $this->Form->input('cou_nom', array('label' => false, 'placeholder' => 'Nom du cours', 'class' => 'form-control', 'type' => 'text')) ?>
@@ -14,6 +15,16 @@
         		<?= $this->Form->input('cou_description', array('label' => false, 'placeholder' => 'Description (age concerné)', 'class' => 'form-control', 'type' => 'text')) ?>
 	        </div>
 	        <br>
+	        <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-eur"></i></span>
+        		<?= $this->Form->input('cou_tarif', array('label' => false, 'placeholder' => 'Prix', 'class' => 'form-control', 'type' => 'text')) ?>
+	        </div>	
+	        <br>        
+	        <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-eur"></i></span>
+        		<?= $this->Form->input('cou_licence', array('label' => false, 'placeholder' => 'Licence', 'class' => 'form-control', 'type' => 'text')) ?>
+	        </div>	        
+	        <br>        
 	    </fieldset>
 	<?= $this->Form->button(__('Enregistrer')); ?>
 	<?= $this->Form->end() ?>

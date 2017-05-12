@@ -50,7 +50,7 @@
             </div>
 	        <br>
 	        <div class="input-group">
-	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<span class="input-group-addon"><i class="fa fa-building"></i></span>
 	        	<?= $this->Form->input('mem_adr1', array('label' => false, 
 	        											 'placeholder' => 'Adresse ligne 1', 
 	        											 'type' => 'text', 
@@ -58,7 +58,7 @@
 	        </div>
 	        <br>
 	        <div class="input-group">
-	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<span class="input-group-addon"><i class="fa fa-building"></i></span>
 	        	<?= $this->Form->input('mem_adr2', array('label' => false, 
 	        											 'placeholder' => 'Adresse ligne 2', 
 	        											 'type' => 'text', 
@@ -66,7 +66,7 @@
 	        </div>
 	        <br>
 	        <div class="input-group">
-	        	<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+	        	<span class="input-group-addon"><i class="fa fa-building"></i></span>
 	        	<?= $this->Form->input('mem_cp', array('label' => false, 
 	        											 'placeholder' => 'Code postal', 
 	        											 'type' => 'text', 
@@ -74,7 +74,7 @@
 	        </div>
 	        <br>
 	        <div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-tint"></i></span>
+				<span class="input-group-addon"><i class="fa fa-building"></i></span>
 		        <?php $villes = array('91290' => 'Arpajon', 
 										'91200' => 'Athis-Mons',
 										'91630' => 'Avrainville',

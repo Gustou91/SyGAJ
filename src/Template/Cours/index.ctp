@@ -14,6 +14,9 @@
             <th class="col-xs-1">Id</th>
             <th class="col-xs-2">Nom</th>
             <th class="col-xs-5">Description</th>
+            <th class="col-xs-1">Tarif</th>
+            <th class="col-xs-1">Licence</th>
+            <th class="col-xs-1">Total</th>
             <th class="col-xs-1" style="text-align: center;">Suppression</th>
         </tr>
         <?php foreach ($cours as $unCours): ?>
@@ -23,7 +26,10 @@
                 </td>
                 <td class="col-xs-2"><?php echo $unCours->cou_nom; ?></td>
                 <td class="col-xs-5"><?php echo $unCours->cou_description; ?></td>
-                <td>
+                <td class="col-xs-1"><?php echo $unCours->cou_tarif; ?>€</td>
+                <td class="col-xs-1"><?php echo $unCours->cou_licence; ?>€</td>
+                <td class="col-xs-1"><?php echo $unCours->cou_tarif + $unCours->cou_licence; ?>€</td>
+                <td align="center">
                   <?php echo $this->Html->link('<span class="glyphicon glyphicon-trash"></span> Supprimer',array('action' => 'delete', $unCours->id), array('class' => 'btn btn-default', 'escape' => false), 'Voulez-vous vraiment supprimer ce cours ?'); ?>
                 </td>
             </tr>
