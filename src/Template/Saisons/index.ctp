@@ -13,12 +13,14 @@
         <tr role="row">
             <th class="col-xs-1">Id</th>
             <th class="col-xs-2">Nom</th>
+            <th class="col-xs-1">Active</th>
             <th class="col-xs-1" style="text-align: center;">Suppression</th>
         </tr>
         <?php foreach ($saisons as $saison): ?>
             <tr role="row">
               <td class="col-xs-1"><?php echo $this->Html->link($saison->id,array('action' => 'edit', $saison->id)); ?></td>
               <td class="col-xs-2"><?php echo $saison->sai_nom; ?></td>
+              <td class="col-xs-2"><?php echo $saison->sai_active == 1 ? 'Oui' : 'Non'; ?></td>
               <td>
                 <?php echo $this->Html->link('<span class="glyphicon glyphicon-trash"></span> Supprimer',array('action' => 'delete', $saison->id), array('class' => 'btn btn-default', 'escape' => false), 'Voulez-vous vraiment supprimer cette saison ?'); ?>
               </td>

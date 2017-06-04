@@ -20,7 +20,6 @@ class CoursController extends AppController
         $cours = $this->Cours->find('all');
         $this->set('cours', $this->Cours->find('all', array(
             'order' => array('Cours.cou_nom' => 'asc'))));
-
     }
 
     

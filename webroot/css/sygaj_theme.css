@@ -5,3 +5,14 @@
     margin: 0em auto 0px;
 }
 
+.input-group[class*="col-"] {
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 10px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-bottom: 10px
+}

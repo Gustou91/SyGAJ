@@ -14,10 +14,14 @@ class MembresController extends AppController
         $this->Auth->allow(['logout']);
     }
 
-     public function index()
-     {
+    public function index()
+    {
+        debug($this);
+        debug($this->Membres);
+        die();
+
         $membres = $this->Membres->find('all');
-        $this->set('membres', $this->Membres->find('all'));
+        $this->set('membres', $membres);
 
     }
 
@@ -32,6 +36,7 @@ class MembresController extends AppController
     public function edit($id = null)
     {
         $membre = $this->Membres->get($id);
+
         if ($this->request->is(['post', 'put'])) {
            $this->Membres->patchEntity($membre, $this->request->data);
             if ($this->Membres->save($membre)) {
