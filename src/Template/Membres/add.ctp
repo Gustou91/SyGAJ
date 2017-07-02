@@ -48,42 +48,24 @@
 		    </div>
 
 	    	<div class="row">
-		        <div class="input-group col-md-4">
-		        	<span class="input-group-addon"><i class="fa fa-building"></i></span>
-		        	<?= $this->Form->input('mem_cp', array('label' => false, 
-		        											 'placeholder' => 'Code postal', 
-		        											 'type' => 'text', 
-		        											 'class' => 'form-control')) ?>
-		        </div>
-		        <div class="input-group col-md-4">
+	        	<div class="input-group col-md-8">
 					<span class="input-group-addon"><i class="fa fa-building"></i></span>
-			        <?php $villes = array('91290' => 'Arpajon', 
-											'91200' => 'Athis-Mons',
-											'91630' => 'Avrainville',
-											'91630' => 'Ballainvilliers',
-											'91610' => 'Ballancourt-sur-Essonne',
-											'91570' => 'Bièvres',
-											'91590' => 'Boissy-le-Cutté',
-											'91870' => 'Boissy-le-Sec',
-											'91070' => 'Bondoufle',
-											'91850' => 'Bourray-Sur-Juine',
-											'91220' => 'Brétigny-sur-Orges',
-											'91630' => 'Cheptainville',
-											'91630' => 'Marolles-en-Hurepoix');
-			        echo $this->Form->select('mem_ville', $villes); ?>				
+			        <?php echo $this->Form->select('mem_idville', $villes, [
+			        	'empty' => '(choisissez la ville)',
+			        	'id' => 'listVilles'
+			        	]); ?>
 	            </div>
-	        </div>
+		    </div>
 	        
 	    	<div class="row">
 		        <div class="input-group col-md-4">
 	                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-	        		<?= $this->Form->input('mem_datnaiss', 
-	        			array('label' => false, 
-	        				  'placeholder' => 'Date de naissance', 
+	        		<?= $this->Form->input('mem_datnaiss', [
+	        				  'label' => false, 
 	        				  'class' => 'form-control', 
-	        				  'type' => 'date',
-	        				  'minyear' => '1917',
-	        				  'maxyear' => '2017')) ?>
+	        				  'type' => 'text',
+	        				  'data-inputmask' => "'alias': 'dd/mm/yyyy'",
+	        				  'data-mask' => '']); ?>		  
 		        </div>
        	        <div class="input-group col-md-4">
 					<span class="input-group-addon"><i class="fa fa-tint"></i></span>
@@ -107,4 +89,29 @@
 	</div>
 
 </div>
+
+<?php
+$this->Html->css([
+    'AdminLTE./plugins/daterangepicker/daterangepicker-bs3',
+    'AdminLTE./plugins/iCheck/all',
+    'AdminLTE./plugins/colorpicker/bootstrap-colorpicker.min',
+    'AdminLTE./plugins/timepicker/bootstrap-timepicker.min',
+    'AdminLTE./plugins/select2/select2.min',
+  ],
+  ['block' => 'css']);
+
+$this->Html->script([
+  'AdminLTE./plugins/select2/select2.full.min',
+  'AdminLTE./plugins/input-mask/jquery.inputmask',
+  'AdminLTE./plugins/input-mask/jquery.inputmask.date.extensions',
+  'AdminLTE./plugins/input-mask/jquery.inputmask.extensions',
+  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js',
+  'AdminLTE./plugins/daterangepicker/daterangepicker',
+  'AdminLTE./plugins/colorpicker/bootstrap-colorpicker.min',
+  'AdminLTE./plugins/timepicker/bootstrap-timepicker.min',
+  'AdminLTE./plugins/iCheck/icheck.min',
+  'sygaj-ui',
+],
+['block' => 'script']);
+?>
 

@@ -16,9 +16,6 @@ class MembresController extends AppController
 
     public function index()
     {
-        debug($this);
-        debug($this->Membres);
-        die();
 
         $membres = $this->Membres->find('all');
         $this->set('membres', $membres);
@@ -38,7 +35,10 @@ class MembresController extends AppController
         $membre = $this->Membres->get($id);
 
         if ($this->request->is(['post', 'put'])) {
-           $this->Membres->patchEntity($membre, $this->request->data);
+
+            //$this->Membres->patchEntity($membre, $this->request->data);
+            $this->Membres->patchEntity($membre, $this->request->data, ['validate' => true, 'associated' => ['Villes']]);
+
             if ($this->Membres->save($membre)) {
                 $this->Flash->success(__("Le membre a été sauvegardé."));
                 return $this->redirect(['action' => 'index']);
@@ -48,7 +48,25 @@ class MembresController extends AppController
 
         $this->set('membre', $membre);
 
+
+        // Pour la liste des villes dans le SELECT.
+        $this->loadModel('Villes');
+        $villes = $this->Villes->find('list', [
+            'keyField' => 'id',
+            'valueField' => function ($ville) {
+                return $ville->get('Label');
+            },
+            'conditions' => 'vil_active = 1',
+            'order' => 'vil_nom ASC'
+        ]);
+
+        $data = $villes->toArray();
+        $this->set('villes', $data);
+
     }
+
+
+
 
     // Ajout d'un membre.
     public function add()
@@ -57,7 +75,8 @@ class MembresController extends AppController
         $membre = $this->Membres->newEntity();
         if ($this->request->is('post')) {
  
-            $membre = $this->Membres->patchEntity($membre, $this->request->data, ['validate' => true]);
+            //$membre = $this->Membres->patchEntity($membre, $this->request->data, ['validate' => true]);
+            $membre = $this->Membres->patchEntity($membre, $this->request->data, ['validate' => true, 'associated' => ['Villes']]);
 
 
             if ($this->Membres->save($membre)) {
@@ -68,6 +87,20 @@ class MembresController extends AppController
         }
         $this->set('membre', $membre);
 
+
+        // Pour la liste des villes dans le SELECT.
+        $this->loadModel('Villes');
+        $villes = $this->Villes->find('list', [
+            'keyField' => 'id',
+            'valueField' => function ($ville) {
+                return $ville->get('Label');
+            },
+            'conditions' => 'vil_active = 1',
+            'order' => 'vil_nom ASC'
+        ]);
+
+        $data = $villes->toArray();
+        $this->set('villes', $data);
     }
 
 

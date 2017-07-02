@@ -37,7 +37,7 @@ class SaisonsController extends AppController
         if ($this->request->is(['post', 'put'])) {
            $this->Saisons->patchEntity($saison, $this->request->data);
             if ($this->Saisons->save($saison)) {
-                $this->Flash->success(__('La saison a été sauvegardé.'));
+                $this->Flash->success(__('La saison a été sauvegardée.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__("Impossible d'enregistrer la saison."));

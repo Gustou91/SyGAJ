@@ -6,6 +6,14 @@ use Cake\Event\Event;
 
 class InscriptionsController extends AppController
 {
+    
+    public function initialize()
+        {
+            parent::initialize();
+            $this->loadComponent('Flash');
+            $this->loadComponent('RequestHandler');
+ 
+        }
 
     public function beforeFilter(Event $event)
     {
@@ -14,8 +22,10 @@ class InscriptionsController extends AppController
         $this->Auth->allow(['logout']);
     }
 
-     public function index()
-     {
+
+
+    public function index()
+    {
 
 
         $inscriptions = $this->Inscriptions->find('all', ['contain' =>['Cours', 'Membres', 'Saisons']]);
@@ -26,15 +36,14 @@ class InscriptionsController extends AppController
 
     }
 
-
     
     public function view($id)
     {
         $inscriptions = $this->Inscriptions->get($id);
         $this->set(compact('membre'));
     }
+ 
 
-    
     public function edit($id = null)
     {
         $inscription = $this->Inscriptions->get($id);
@@ -52,10 +61,10 @@ class InscriptionsController extends AppController
 
     }
 
+
     // Ajout d'un membre.
     public function add()
     {
-        
         $inscription = $this->Inscriptions->newEntity();
         if ($this->request->is('post')) {
  
@@ -77,7 +86,8 @@ class InscriptionsController extends AppController
             'keyField' => 'id',
             'valueField' => function ($membre) {
                 return $membre->get('Label');
-            }
+            },
+            'order' => 'mem_nom, mem_prenom ASC'
         ]);
 
         $data = $membres->toArray();
@@ -93,8 +103,72 @@ class InscriptionsController extends AppController
 
         $data = $cours->toArray();
         $this->set('cours', $data);
-        
 
+
+        // Pour la saison active.
+        $this->loadModel('Saisons');
+        $saison = $this->Saisons->find('all', [
+            'conditions' => 'sai_active = 1'
+        ]);
+
+        $data = $saison->first();
+        $activeSaison = $data->sai_nom;
+        $this->set('saison', $data->sai_nom);
+
+
+        // Pour la liste des articles.
+        $this->loadModel('Articles');
+        $articles = $this->Articles->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'art_nom'
+        ]);
+
+
+        $data = $articles->toArray();
+        $this->set('articles', $data);  
+
+        
+        // Pour la liste des villes dans le SELECT.
+        $this->loadModel('Villes');
+        $villes = $this->Villes->find('list', [
+            'keyField' => 'id',
+            'valueField' => function ($ville) {
+                return $ville->get('Label');
+            },
+            'conditions' => 'vil_active = 1',
+            'order' => 'vil_nom ASC'
+        ]);
+
+        $data = $villes->toArray();
+        $this->set('villes', $data);
+      
+    }
+
+
+   
+    public function find($id = null)
+    {
+        $this->log("Début controller find.");
+        $this->loadModel('Membres');
+        $this->log($this->request);
+
+        //$membre = $this->Membres->get($id);
+
+        if ($this->request->is(['post', 'put'])) {
+
+            //$membre = $this->Membres->newEntity();
+            //$membre = $this->Membres->patchEntity($membre, $this->request->data);
+
+            $this->log("Donnée: ".$this->request->data('id'));
+            $memId = $this->request->data('id');
+            $membre = $this->Membres->get($memId);
+            $this->log("Membre: ");
+            $this->log($membre);
+
+        }
+
+        $this->set('membre', $membre);
+        $this->set('_serialize', ['membre']);
 
     }
 

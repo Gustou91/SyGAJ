@@ -21,6 +21,12 @@ class MembresTable extends Table
     // Pour activer la mise à jour automatique des champs created et modified.
     public function initialize(array $config) {
         $this->addBehavior('Timestamp');
+
+        $this->belongsTo('Villes', [
+            'className' => 'Villes',
+            'foreignKey' => 'mem_idville',
+            'fields' => 'id'
+        ]);
     }
 
 
