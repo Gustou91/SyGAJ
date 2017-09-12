@@ -26,7 +26,7 @@
                 <td class="col-xs-5"><?php echo $article->art_description; ?></td>
                 <td class="col-xs-1"><?php echo $article->art_prix; ?>€</td>
                 <td align="center">
-                  <?php echo $this->Html->link('<span class="glyphicon glyphicon-trash"></span> Supprimer',array('action' => 'delete', $article->id), array('class' => 'btn btn-default', 'escape' => false), 'Voulez-vous vraiment supprimer ce cours ?'); ?>
+                  <?php echo $this->Html->link('<span class="glyphicon glyphicon-trash"></span> Supprimer',array('action' => 'delete', $article->id), array('class' => 'btn btn-default', 'escape' => false), 'Voulez-vous vraiment supprimer cet article ?'); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

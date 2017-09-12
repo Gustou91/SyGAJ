@@ -23,7 +23,7 @@ class InscriptionsController extends AppController
     }
 
 
-
+    // Liste des inscriptions.
     public function index()
     {
 
@@ -44,6 +44,7 @@ class InscriptionsController extends AppController
     }
  
 
+    // Edition d'une inscription.
     public function edit($id = null)
     {
         $inscription = $this->Inscriptions->get($id);
@@ -127,7 +128,7 @@ class InscriptionsController extends AppController
         $data = $articles->toArray();
         $this->set('articles', $data);  
 
-        
+
         // Pour la liste des villes dans le SELECT.
         $this->loadModel('Villes');
         $villes = $this->Villes->find('list', [
@@ -145,11 +146,62 @@ class InscriptionsController extends AppController
     }
 
 
-   
+    // Recherche d'un membre.
     public function find($id = null)
     {
         $this->log("Début controller find.");
         $this->loadModel('Membres');
+        //this->log('Requête: '.$this->request->toArray());
+
+        //$membre = $this->Membres->get($id);
+
+        if ($this->request->is(['get', 'post', 'put'])) {
+
+            //$membre = $this->Membres->newEntity();
+            //$membre = $this->Membres->patchEntity($membre, $this->request->data);
+
+            // Récupération de l'Id du membre sélectionné dans la liste déroulante.
+            //$memId = $this->request->data('id');
+            // Récupération de membre correspondant à l'id depuis la base de données.
+            //$membre = $this->Membres->get($memId);
+
+            $memFullName = $this->request->data('fullName').'%';
+            $this->log("Donnée: ".$memFullName);
+            $membre = $this->Membres->find()
+                ->where(['concat(mem_nom, \' \', mem_prenom) like' => $memFullName])
+                ->orwhere(['concat(mem_prenom, \' \', mem_nom) like' => $memFullName ]);
+
+            $this->log("Membre: ");
+            $this->log($membre);
+
+            $this->log("Resultat: ".$membre->mem_nom);
+
+        }
+
+        $this->set('membre', $membre);
+        $this->set('_serialize', ['membre']);
+
+    }
+
+
+    // Ajout d'un article.
+    public function getArticles($id = null)
+    {
+        $this->log("Début controller getArticles.");
+        $this->loadModel('Commandes');
+        $this->log($this->request);
+        $commande = $this->Commandes->find('all', ['contain' =>['Detailcommandes', 'Membres']]);
+        //debug($inscriptions);
+        //die();
+        $this->set('commande', $commande);
+    }
+
+
+    // Ajout d'un article.
+    public function addArticle($id = null)
+    {
+        $this->log("Début controller addArticle.");
+        /*$this->loadModel('Membres');
         $this->log($this->request);
 
         //$membre = $this->Membres->get($id);
@@ -168,12 +220,11 @@ class InscriptionsController extends AppController
         }
 
         $this->set('membre', $membre);
-        $this->set('_serialize', ['membre']);
+        $this->set('_serialize', ['membre']);*/
 
     }
 
-
-    // Suppression d'un membre.
+    // Suppression d'une inscription.
     public function delete($id)
     {
         // Chargement du membre à supprimer.
