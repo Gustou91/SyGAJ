@@ -14,10 +14,10 @@
             <th class="col-xs-1">Id</th>
             <th class="col-xs-2">Nom</th>
             <th class="col-xs-2">Ville</th>
-            <th class="col-xs-2">Mail</th>
+            <th class="col-xs-1">Mail</th>
             <th class="col-xs-2">Téléphone</th>
-            <th class="col-xs-1">Président</th>
-            <th class="col-xs-1">Trésorier</th>
+            <th class="col-xs-2">Président</th>
+            <th class="col-xs-2">Trésorier</th>
             <th class="col-xs-1" style="text-align: center;">Suppression</th>
         </tr>
         <?php foreach ($clubs as $club): ?>
@@ -27,10 +27,10 @@
               </td>
               <td class="col-xs-2"><?php echo $club->clu_nom; ?></td>
               <td class="col-xs-2"><?php echo $club->ville->vil_nom; ?></td>
-              <td class="col-xs-2"><?php echo $club->clu_mail; ?></td>
+              <td class="col-xs-1"><?php echo $club->clu_mail; ?></td>
               <td class="col-xs-2"><?php echo $club->clu_tel; ?></td>
-              <td class="col-xs-1"><?php echo $club->clu_president; ?></td>
-              <td class="col-xs-1"><?php echo $club->clu_tresorier; ?></td>
+              <td class="col-xs-2"><?php echo $club->clu_president; ?></td>
+              <td class="col-xs-2"><?php echo $club->clu_tresorier; ?></td>
                 <!-- <td class="col-xs-1"><span class="glyphicon glyphicon-trash glyphicon-large"/></td> -->
 <!--                 <td class="col-xs-1"><?php echo $this->Html->link('<i class="icon-align-left"></i>', 
                   array('controller' => 'links', 'action' => 'delete', $club->id), 
