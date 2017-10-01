@@ -49,7 +49,17 @@ class CandidatsController extends AppController
         $candidat = $this->Candidats->get($id);
 
         if ($this->request->is(['post', 'put'])) {
-           $this->Candidats->patchEntity($candidat, $this->request->data);
+            $this->Candidats->patchEntity($candidat, $this->request->data);
+
+            $this->loadModel('Categories');
+            $annee = substr($candidat->can_datnaiss, -4);
+            $categories = $this->Categories->find()
+                ->where([
+                    'cat_adeb <=' => $annee,
+                    'cat_afin >=' => $annee]);
+
+            $candidat->can_clef = $categories->first()->id.'-'.$candidat->can_sexe.'-'.$candidat->can_poids;
+
             if ($this->Candidats->save($candidat)) {
                 $this->Flash->success(__("Le candidat a été sauvegardé."));
                 return $this->redirect(['action' => 'index']);
@@ -103,6 +113,14 @@ class CandidatsController extends AppController
  
             $candidat = $this->Candidats->patchEntity($candidat, $this->request->data, ['validate' => true]);
 
+            $this->loadModel('Categories');
+            $annee = substr($candidat->can_datnaiss, -4);
+            $categories = $this->Categories->find()
+                ->where([
+                    'cat_adeb <=' => $annee,
+                    'cat_afin >=' => $annee]);
+
+            $candidat->can_clef = $categories->first()->id.'-'.$candidat->can_sexe.'-'.$candidat->can_poids;
 
             if ($this->Candidats->save($candidat)) {
                 $this->Flash->success(__("Le candidat a été sauvegardé."));

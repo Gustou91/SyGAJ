@@ -57,7 +57,7 @@ class ClubsController extends AppController
             $this->Flash->error(__("Impossible d'enregistrer le club."));
         }
 
-        $this->set('club', $club);
+        $this->set('club', $club
 
 
         // Pour la liste des villes dans le SELECT.

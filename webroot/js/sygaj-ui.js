@@ -7,6 +7,8 @@ $(document).ready(function(){
     $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
     //Datemask2 mm/dd/yyyy
     $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+    //Datemask3 yyyy
+    $("#datemask3").inputmask("yyyy", {"placeholder": "aaaa"});
     //Money Euro
     $("[data-mask]").inputmask();
 
