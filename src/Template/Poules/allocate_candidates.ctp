@@ -13,6 +13,7 @@
             <th class="col-xs-1">Année</th>
             <th class="col-xs-1">Sexe</th>
             <th class="col-xs-1">Poids</th>
+            <th class="col-xs-1">Clef</th>
         </tr>
         <?php foreach ($candidats as $candidat): ?>
             <tr role="row">
@@ -22,6 +23,7 @@
               <td class="col-xs-1"><?php echo substr($candidat->can_datnaiss, -4); ?></td>
               <td class="col-xs-1"><?php echo $candidat->can_sexe; ?></td>
               <td class="col-xs-1"><?php echo $candidat->can_poids; ?></td>
+              <td class="col-xs-1"><?php echo $candidat->can_clef; ?></td>
                 <!-- <td class="col-xs-1"><span class="glyphicon glyphicon-trash glyphicon-large"/></td> -->
 <!--                 <td class="col-xs-1"><?php echo $this->Html->link('<i class="icon-align-left"></i>', 
                   array('controller' => 'links', 'action' => 'delete', $poule->id), 
