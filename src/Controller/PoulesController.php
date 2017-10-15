@@ -39,7 +39,14 @@ class PoulesController extends AppController
     // Affecter les candidats.
     public function allocateCandidates()
     {
+        /*$testPoules = $this->Poules->getAvailableGroup(2, 'F', 20, 4, 3, 5);
+        debug($testPoules);
+        foreach($testPoules as $testPoule) {
+            debug($testPoule->aff_idpoule);
+        }
+        die();*/
 
+        // Recherche de la liste des candidats non affectés à une poule.
         $subquery = $this->Poules->Affectations->find()
         ->select(['Affectations.aff_idcandidat']);
 
@@ -48,12 +55,14 @@ class PoulesController extends AppController
         ->order(['can_clef']);
         //$this->log("Liste des candidats non affectés: ".$this->request);
 
-        $nbCandidats = 0;       // Nombre de candidats dans la poule courante.
-        $maxCandidats = 4;      // Nombre max de candidats par poule.
-        $maxEcartPoids = 3;     // Ecart max de poids entre le plus léger et le plus lourd dans la poule.
-        $idPoule = -1;          // Id de la poule courante.
+        //$nbCandidats = 0;   // Nombre de candidats dans la poule courante.
+        $maxCandidats = 4;    // Nombre max de candidats par poule.
+        $maxEcartPoids = 3;   // Ecart max de poids entre le plus léger et le plus lourd dans la poule.
+        $maxMemeClub = 2;     // Nombre max de candidat du même club dans la même poule.
+        //$idPoule = -1;      // Id de la poule courante.
 
         foreach($candidats as $candidat) {
+
 
             # Récupération de la catégorie du candidat.
             $clef = explode("-", $candidat->can_clef);
@@ -63,10 +72,61 @@ class PoulesController extends AppController
             $this->log("Catégorie du candidat courant   : ".$idCateg);
             $this->log("Sexe du candidat courant        : ".$candidat->can_sexe);
             $this->log("Poids du candidat courant       : ".$candidat->can_poids);
-            $this->log("Nb candidats affectés à la poule: ".$nbCandidats);
             $this->log("Nb max de candidats par poule   : ".$maxCandidats);
 
-            if (isset($poule)) {
+            // Recherche d'une poule compatible pour le candidat.
+            $idPoule = $this->Poules->getAvailableGroup(
+                $idCateg, 
+                $candidat->can_sexe, 
+                $candidat->can_poids, 
+                $maxEcartPoids, 
+                $maxCandidats,
+                $maxMemeClub,
+                $candidat->can_idclub);
+
+            //debug($idPoule);
+
+            if (isset($idPoule) && $idPoule > -1) {
+
+                // On a trouvé une poule compatible.
+                $this->log("Une poule compatible a été trouvée.");
+
+            } else {
+
+                // Pas de poule dispo, on en créé une nouvelle.
+                $this->log("Création d'une nouvelle poule.");
+                $idPoule = -1;
+                $poule = $this->Poules->newEntity();
+                $poule->pou_idcateg = $idCateg;
+                $poule->pou_sexe = $candidat->can_sexe;
+                $poule->pou_poidsmin = $candidat->can_poids;
+
+                if ($this->Poules->save($poule)) {
+                    $this->log("Création de la nouvelle poule réussie :".$poule->id);
+                    $idPoule = $poule->id;
+                } 
+            }
+
+
+            # Si la poule a bien été créée ou récupérée.
+            if ($idPoule != -1) {
+
+                # Ajout du candidat dans la poule.
+                $this->log("Ajout du candidat ".$candidat->id." ".$candidat->can_nom." ".$candidat->can_prenom." dans la poule ".$idPoule.".");
+                $this->loadModel('Affectations');
+
+                $affectation = $this->Affectations->newEntity();
+                $affectation->aff_idpoule = $idPoule;
+                $affectation->aff_idcandidat = $candidat->id;
+
+                if ($this->Affectations->save($affectation)) {
+                    $idAffectation = $affectation->id;
+                } 
+
+            }
+            
+
+            /*if (isset($poule)) {
 
                 $this->log("Ecart de poids                  : ".($candidat->can_poids - $poule->pou_poidsmin));
 
@@ -138,7 +198,7 @@ class PoulesController extends AppController
                     $nbCandidats++;
                 } 
 
-            }
+            }*/
 
         }
 
