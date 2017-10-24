@@ -65,9 +65,28 @@
         nodes: nodes,
         edges: edges
     };
+    var locales = {
+		fr: {
+			edit: 'Editer',
+			del: 'Supprimer',
+			back: 'Retour',
+			addNode: 'Ajouter un candidat',
+			addEdge: 'Affecter',
+			editNode: 'Editer un candidat',
+			editEdge: 'Editer une affectation',
+			addDescription: 'Cliquer dans un espace vide pour ajoute un nouveau candidat.',
+			edgeDescription: 'Cliquer sur un noeud et glisser le lien vers une poule pour les connecter.',
+			editEdgeDescription: 'Cliquer sur le point de contôle et faite-le glisser vers une poule pour les connecter.',
+			createEdgeError: 'Impossible de lier un connecteur à un cluster',
+			deleteClusterError: 'Les clusters ne peuvent pas être supprimés.',
+			editClusterError: 'Les clusters ne peuvent pas être édités.'
+			}
+		}
     var options = {
     	autoResize: true,
   		width: '100%',
+  		locale: 'fr',
+  		locales: locales,
         nodes: {
             shape: 'dot',
             size: 20,
@@ -84,10 +103,10 @@
         manipulation: {
 		    addEdge: function(edgeData,callback) {
 		    	if (edgeData.from === edgeData.to) {
-		        	var r = confirm("Do you want to connect the node to itself?");
-		        	if (r === true) {
-		        		callback(edgeData);
-		        	}
+		        	//var r = confirm("Do you want to connect the node to itself?");
+		        	//if (r === true) {
+		        	//	callback(edgeData);
+		        	//}
 		      	}
 		      	else {
 		        	callback(edgeData);
