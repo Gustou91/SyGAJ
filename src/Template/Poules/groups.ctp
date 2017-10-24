@@ -2,6 +2,7 @@
 <?php echo $this->Html->css('vis-network.min.css'); ?>
 
 <?php echo $this->Html->script('vis-network.min.js'); ?>
+<?php echo $this->Html->script('vis.js'); ?>
 
 <div class="box">
   <div class="box-header">
@@ -20,27 +21,43 @@
 
 <script type="text/javascript">
     var len = undefined;
+	var edges = [];
+    var nodes = [];
 
-    var nodes = [{id: 0, label: "0", group: 0},
-        {id: 1, label: "Pauline CHAILLOT", group: 0},
-        {id: 2, label: "Valentine JEAN", group: 0},
-        {id: 3, label: "Eve FERON", group: 0},
-        {id: 4, label: "Clémentine DADOU", group: 0},
-		{id: 5, label: "1", group: 1},
-		{id: 6, label: "Léona ALBERNAZ", group: 1},
-		{id: 7, label: "Mélina FABRI", group: 1},
-		{id: 8, label: "Léna SITAUD", group: 1},
-		{id: 9, label: "Albane BOSQUEL", group: 1},
-    ];
-    var edges = [{from: 1, to: 0},
-        {from: 2, to: 0},
-        {from: 3, to: 0},
-        {from: 4, to: 0},
-		{from: 6, to: 5},
-		{from: 7, to: 5},
-		{from: 8, to: 5},
-		{from: 9, to: 5}
-    ]
+    <?php
+	    $noItem = 0;
+	    $noGroup = 0;
+
+		foreach ($poulesList as $poule) {
+
+			echo "console.log($poule->id);\n";
+
+			# Changement de poule.
+			$noGroup = $noItem;
+
+			# Ajout du nouvel élément Poule.
+			#echo "nodes.push({id: ".$noItem.", label: \"".$poule->id."/".$poule->category->cat_adeb."\", group: ".$noGroup."});\n";
+			#echo "nodes.push({id: ".$noItem.", label: \"".$poule->id." - ".$poule->category->cat_nom."\n".$poule->category->cat_adeb."/".$poule->category->cat_afin."\", group: ".$noGroup."});\n";
+			echo "nodes.push({id: ".$noItem.", label: \"".$poule->id." - ".$poule->category->cat_nom." (".$poule->pou_sexe.")"."\", group: ".$noGroup."});\n";
+			$noItem ++;
+
+			# Boucle sur les affectations pour la poule courante.
+			foreach ($poule->affectations as $affectation) {
+
+				# Ajout de l'élément candidat.
+				echo "nodes.push({id: ".$noItem.", label: \"".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
+
+	
+				# Raccrochage à l'élément poule.
+				echo "edges.push({from: ".$noItem.", to: ".$noGroup."});\n";
+
+				$noItem ++;
+
+			}
+
+		}
+    ?>
+
 
     // create a network
     var container = document.getElementById('mynetwork');
@@ -49,11 +66,13 @@
         edges: edges
     };
     var options = {
+    	autoResize: true,
+  		width: '100%',
         nodes: {
             shape: 'dot',
             size: 20,
             font: {
-                size: 10
+                size: 12
             },
             borderWidth: 2,
             shadow:true
@@ -61,7 +80,23 @@
         edges: {
             width: 2,
             shadow:true
-        }
+        },
+        manipulation: {
+		    addEdge: function(edgeData,callback) {
+		    	if (edgeData.from === edgeData.to) {
+		        	var r = confirm("Do you want to connect the node to itself?");
+		        	if (r === true) {
+		        		callback(edgeData);
+		        	}
+		      	}
+		      	else {
+		        	callback(edgeData);
+		    	}
+    		},
+    		editEdge: true,
+    		addNode: false
+		}  
+
     };
     network = new vis.Network(container, data, options);
 </script>

@@ -67,7 +67,8 @@ class PoulesController extends AppController
 
         # Récupération de la liste des affectations pou affichage.
         $poulesList = $this->Poules->find('all', [
-            'contain' =>['Affectations'],
+            'recursive' => 3,
+            'contain' =>['Affectations', 'Categories','Affectations.Candidats','Affectations.Candidats.Clubs'],
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
         /*
@@ -85,7 +86,7 @@ class PoulesController extends AppController
         /*debug($poulesList->toArray());
         die();*/
 
-        $this->set('$poulesList', $poulesList);
+        $this->set('poulesList', $poulesList);
 
     } 
 

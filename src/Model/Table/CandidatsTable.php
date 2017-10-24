@@ -33,11 +33,6 @@ class CandidatsTable extends Table
             'fields' => 'id'
         ]);
 
-        $this->belongsTo('Affectations', [
-            'className' => 'Affectations',
-            'foreignKey' => 'aff_idcandidat',
-            'fields' => 'id'
-        ]);
     }
 
 

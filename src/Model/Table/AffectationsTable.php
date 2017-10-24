@@ -20,10 +20,10 @@ class AffectationsTable extends Table
             'fields' => 'id'
         ]);
      
-        $this->belongsTo('Candidats', [
+        $this->hasOne('Candidats', [
             'className' => 'Candidats',
-            'foreignKey' => 'aff_idcandidat',
-            'fields' => 'id'
+            'foreignKey' => 'id',
+            'bindingKey' => 'aff_idcandidat'
         ]);
 
     }
