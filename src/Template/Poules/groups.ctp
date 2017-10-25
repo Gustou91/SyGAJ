@@ -7,22 +7,33 @@
 <div class="box">
   <div class="box-header">
     <h3 class="box-title">Liste des poules</h3> 
+    <input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
   </div>
-      <?php
-    	/*$cpt = 0;
-    	$noGroup = 0;
-    	$pouleId = -1;
-    	foreach ($poulesList as $poule) {
-    		$label = $poule->id != $pouleId ? $poule->id : $poule->affectations->aff_idcandidat;
-    		echo "{id: ".$cpt.", label: \"".$label.", group: ".$noGroup."},";
-    	}*/
-    ?>
+
 <div id="mynetwork"></div>
 
 <script type="text/javascript">
     var len = undefined;
 	var edges = [];
     var nodes = [];
+    var saveButton;
+
+    saveButton = document.getElementById('save_button');
+
+
+    function addConnections(elem, index) {
+        // need to replace this with a tree of the network, then get child direct children of the element
+        elem.connections = network.getConnectedNodes(index);
+    }
+
+
+	function saveNetwork() {
+
+		alert("Bouton saveNetwork cliqué.");
+		var allNodes = nodes.get();
+		console.log(allNodes);
+    
+	}
 
     <?php
 	    $noItem = 0;
@@ -38,18 +49,18 @@
 			# Ajout du nouvel élément Poule.
 			#echo "nodes.push({id: ".$noItem.", label: \"".$poule->id."/".$poule->category->cat_adeb."\", group: ".$noGroup."});\n";
 			#echo "nodes.push({id: ".$noItem.", label: \"".$poule->id." - ".$poule->category->cat_nom."\n".$poule->category->cat_adeb."/".$poule->category->cat_afin."\", group: ".$noGroup."});\n";
-			echo "nodes.push({id: ".$noItem.", label: \"".$poule->id." - ".$poule->category->cat_nom." (".$poule->pou_sexe.")"."\", group: ".$noGroup."});\n";
+			echo "nodes.push({id: ".$poule->id.", shape:\"box\", label: \"".$poule->id." - ".$poule->category->cat_nom." (".$poule->pou_sexe.")"."\", group: ".$noGroup."});\n";
 			$noItem ++;
 
 			# Boucle sur les affectations pour la poule courante.
 			foreach ($poule->affectations as $affectation) {
 
 				# Ajout de l'élément candidat.
-				echo "nodes.push({id: ".$noItem.", label: \"".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
+				echo "nodes.push({id: ".$affectation->id.", label: \"".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
 
 	
 				# Raccrochage à l'élément poule.
-				echo "edges.push({from: ".$noItem.", to: ".$noGroup."});\n";
+				echo "edges.push({from: ".$affectation->id.", arrows:\"to\", to: ".$poule->id."});\n";
 
 				$noItem ++;
 
@@ -87,6 +98,7 @@
   		width: '100%',
   		locale: 'fr',
   		locales: locales,
+  		clickToUse: true,
         nodes: {
             shape: 'dot',
             size: 20,
