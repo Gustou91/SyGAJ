@@ -121,7 +121,7 @@
 			"file": "src/Template/Poules/groups.ctp",
 			"settings":
 			{
-				"buffer_size": 3651,
+				"buffer_size": 3958,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -685,15 +685,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3651,
+						"buffer_size": 3958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3439,
-								3439
+								2151,
+								2151
 							]
 						],
 						"settings":
@@ -701,7 +701,7 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1680.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -860,7 +860,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"input":
 	{

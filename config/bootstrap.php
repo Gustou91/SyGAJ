@@ -236,3 +236,5 @@ Configure::write('Theme', [
         'show_social' => true
     ]
 ]);
+Plugin::load('CakePdf', ['bootstrap' => true]);
+Plugin::load('Dompdf');

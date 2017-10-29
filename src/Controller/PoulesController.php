@@ -42,6 +42,39 @@ class PoulesController extends AppController
 
 
     // Liste des candidat non affectés à un groupe.
+    public function printPoules()
+    {
+
+        $this->viewBuilder()->template('print_poules');
+        $this->response->type('application/pdf');
+
+        # Récupération de la liste des affectations pour affichage.
+        $poulesList = $this->Poules->find('all', [
+            'recursive' => 3,
+            'contain' =>['Affectations', 'Categories','Affectations.Candidats','Affectations.Candidats.Clubs'],
+            'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
+        ]);
+
+        $this->set('poulesList', $poulesList);
+
+        $this->loadModel('Challenges');
+        $challenge = $this->Challenges->get(1);
+
+        $this->set('challenge', $challenge);
+
+        $this->viewBuilder()
+            ->className('Dompdf.Pdf')
+            ->layout('pdf/default')
+            ->options(['config' => [
+                'filename' => 'Test.pdf',
+                'render' => 'browser',
+                'orientation' => 'landscape',
+            ]]);
+
+    }
+
+
+    // Liste des candidat non affectés à un groupe.
     public function notAffectedCandidates()
     {
 

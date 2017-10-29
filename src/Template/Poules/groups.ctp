@@ -8,6 +8,12 @@
   <div class="box-header">
     <h3 class="box-title">Liste des poules</h3> 
     <input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
+	<?php echo $this->Html->link('Imprimer', 
+		array('controller' => 'poules', 
+			  'action' => 'printPoules', 
+			  'ext' => 'pdf'), 
+		array( "class"=>"pdf_report", "target"=>"_blank" ));
+	?>
   </div>
 
 <div id="mynetwork"></div>
