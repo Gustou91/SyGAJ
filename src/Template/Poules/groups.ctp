@@ -10,7 +10,7 @@
     <input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
 	<?php echo $this->Html->link('Imprimer', 
 		array('controller' => 'poules', 
-			  'action' => 'printPoules', 
+			  'action' => 'printPoules?categorie='.$categId, 
 			  'ext' => 'pdf'), 
 		array( "class"=>"pdf_report", "target"=>"_blank" ));
 	?>

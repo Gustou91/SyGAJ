@@ -1,4 +1,7 @@
+<div id="view">
 <?php echo $this->Html->css('sygaj_theme'); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.1.4.min'); ?>
+<?php echo $this->Html->script('sygaj'); ?>
 <div class="box">
   <div class="box-header">
     <h3 class="box-title">Liste des poules - </h3> 
@@ -9,7 +12,7 @@
      - 
     <small><?php echo $this->Html->link('Composition des poules', 
             array('controller' => 'poules', 
-                  'action' => 'groupComposition')); ?>
+                  'action' => 'groupComposition?categorie='.$categId)); ?>
     </small>
      - 
      <small><?php echo $this->Html->link('Consulter les judokas non affectés', 
@@ -19,6 +22,16 @@
   </div>
   <!-- /.box-header -->
   <div class="box-body col-xs-12">
+    <div class="row">
+      <div class="input-group col-md-2">
+        <span class="input-group-addon"><i class="fa fa-object-ungroup"></i></span>
+        <?php echo $this->Form->select($categId, $categories, [
+          'empty' => '(choisissez la catégorie)',
+          'val' => $categId,
+          'id' => 'listCategories'
+          ]); ?>
+      </div>
+    </div>
     <table class="table table-bordered table-hover datatable" role="grid">
         <tr role="row">
             <th class="col-xs-1">Id</th>
@@ -50,3 +63,4 @@
   <!-- /.box-body -->
 </div>
 <!-- /.box -->
+</div>

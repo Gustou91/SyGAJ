@@ -7,6 +7,8 @@ use Cake\Event\Event;
 class PoulesController extends AppController
 {
     
+    private $categId = "";
+
     public function initialize()
         {
             parent::initialize();
@@ -27,18 +29,81 @@ class PoulesController extends AppController
     public function index()
     {
 
-
         $poules = $this->Poules->find('all', [
             'contain' =>['Categories'],
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
-        /*debug($poules->toArray());
+
+        if ($this->request->is(['get'])) {
+            if (isset($this->request->query['categorie'])) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $categId = $this->request->query['categorie'];
+                $poules->where(['pou_idcateg' => $categId]);
+            } else {
+                $categId = "";
+            }
+        }
+
+        /*debug($poules);
         die();*/
 
-        $this->set('poules', $poules);
-        
+        $this->set('poules', $poules);        
+
+        // Pour la liste des catégories dans le SELECT.
+        $this->loadModel('Categories');
+
+        $categories = $this->Categories->find('list', [
+            'keyField' => 'id',
+            'valueField' => function ($category) {
+                return $category->get('Label');
+            },
+            'order' => 'cat_nom ASC'
+        ]);
+
+        $data = $categories->toArray();
+        $this->set('categories', $data);
+
+        $this->set('categId', $categId);
+
 
     }
+
+
+    // Liste des candidat non affectés à un groupe.
+    public function printPoulesTest()
+    {
+
+        $this->viewBuilder()->template('print_poules');
+
+        # Récupération de la liste des affectations pour affichage.
+        $poulesList = $this->Poules->find('all', [
+            'recursive' => 3,
+            'contain' =>['Affectations', 'Categories','Affectations.Candidats','Affectations.Candidats.Clubs'],
+            'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
+        ]);
+
+        if ($this->request->is(['get'])) {
+            if (isset($this->request->query['categorie'])) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $categId = $this->request->query['categorie'];
+                $poulesList->where(['pou_idcateg' => $categId]);
+            } else {
+                $categId = "";
+            }
+        }
+
+        $this->set('poulesList', $poulesList);
+
+        $this->loadModel('Challenges');
+        $challenge = $this->Challenges->get(1);
+
+        $this->set('challenge', $challenge);
+
+        $this->set('categId', $categId);
+
+    }
+
+
 
 
     // Liste des candidat non affectés à un groupe.
@@ -55,12 +120,24 @@ class PoulesController extends AppController
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
 
+        if ($this->request->is(['get'])) {
+            if (isset($this->request->query['categorie'])) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $categId = $this->request->query['categorie'];
+                $poulesList->where(['pou_idcateg' => $categId]);
+            } else {
+                $categId = "";
+            }
+        }
+
         $this->set('poulesList', $poulesList);
 
         $this->loadModel('Challenges');
         $challenge = $this->Challenges->get(1);
 
         $this->set('challenge', $challenge);
+
+        $this->set('categId', $categId);
 
         $this->viewBuilder()
             ->className('Dompdf.Pdf')
@@ -104,6 +181,16 @@ class PoulesController extends AppController
             'contain' =>['Affectations', 'Categories','Affectations.Candidats','Affectations.Candidats.Clubs'],
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
+
+        if ($this->request->is(['get'])) {
+            if (isset($this->request->query['categorie'])) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $categId = $this->request->query['categorie'];
+                $poulesList->where(['pou_idcateg' => $categId]);
+            } else {
+                $categId = "";
+            }
+        }
         /*
         $poulesList = $this->Poules->find('all', [
             'contain' =>['Affectations'],
@@ -120,6 +207,8 @@ class PoulesController extends AppController
         die();*/
 
         $this->set('poulesList', $poulesList);
+
+        $this->set('categId', $categId);
 
     } 
 

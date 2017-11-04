@@ -36,6 +36,20 @@ $(document).ready(function(){
 	})
 
 
+
+
+	$('#listCategories').change(function(event){
+		var value = $(this).val();
+		console.log('Event Change detected for listCategories.');
+		console.log('Value = ', value);
+		var monUrl = "/SyGAJ/poules/index?categorie="+value;
+		console.log('url = ', monUrl);
+
+		window.location = monUrl; 
+
+	});
+
+
 	$('#listMembers').change(function(event){
 		var value = $(this).val();
 		console.log('Event Change detected for listMembers.');
@@ -65,6 +79,8 @@ $(document).ready(function(){
 	        }
 	    })
 	});
+
+
 
 
 	$('#listArticles').change(function(event){

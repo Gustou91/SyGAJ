@@ -14,7 +14,7 @@
             <th class="col-xs-1">Id</th>
             <th class="col-xs-5">Nom</th>
             <th class="col-xs-1">Date</th>
-            <th class="col-xs-1" style="text-align: center;">Suppression</th>
+            <!--<th class="col-xs-1" style="text-align: center;">Suppression</th>-->
         </tr>
         <?php foreach ($challenges as $challenge): ?>
             <tr role="row">
@@ -23,9 +23,9 @@
                 </td>
                 <td class="col-xs-5"><?php echo $challenge->cha_nom; ?></td>
                 <td class="col-xs-1"><?php echo $challenge->cha_date; ?></td>
-                <td align="center">
+                <!--<td align="center">
                   <?php echo $this->Html->link('<span class="glyphicon glyphicon-trash"></span> Supprimer',array('action' => 'delete', $challenge->id), array('class' => 'btn btn-default', 'escape' => false), 'Voulez-vous vraiment supprimer ce cours ?'); ?>
-                </td>
+                </td>-->
             </tr>
         <?php endforeach; ?>
     </table>
