@@ -8,8 +8,6 @@
 		        <div class="col-md-6">
 		        	<?= $this->Form->input('username', array('label' => 'Identifiant', 'placeholder' => 'Votre identifiant')) ?>
 		        </div>
-	        </div>
-	        <div class="row">
 		        <div class="col-md-6">
 			        <?= $this->Form->input('password', array('label' => 'Mot de passe', 'placeholder' => 'Votre mot de passe')) ?>
 		        </div>
