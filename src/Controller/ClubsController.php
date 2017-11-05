@@ -23,6 +23,22 @@ class ClubsController extends AppController
     }
 
 
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) 
+            && ($user['role'] === 'admin'
+            || $user['role'] === 'user'
+        )) {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
+
+
+
     // Liste des clubs.
     public function index()
     {

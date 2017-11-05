@@ -23,7 +23,7 @@
   <!-- /.box-header -->
   <div class="box-body col-xs-12">
     <div class="row">
-      <div class="input-group col-md-2">
+      <div class="input-group col-md-3">
         <span class="input-group-addon"><i class="fa fa-object-ungroup"></i></span>
         <?php echo $this->Form->select($categId, $categories, [
           'empty' => '(choisissez la catégorie)',

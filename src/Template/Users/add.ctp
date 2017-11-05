@@ -26,7 +26,9 @@
 			        	</div>
 			        	<div class="col-xs-9">
 					        <?= $this->Form->input('role', array('label' => '',
-			    		        'options' => ['user' => 'Utilisateur', 'admin' => 'Administrateur']
+			    		        'options' => ['user' => 'Utilisateur', 
+			    		        			'admin' => 'Administrateur',
+			    		        			'register_agent' => 'Agent en charge des inscriptions']
 						        )) ?>
 			        	</div>
 			        </div>

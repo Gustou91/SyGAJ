@@ -14,6 +14,8 @@ class UsersController extends AppController
         $this->Auth->allow(['logout']);
     }
 
+
+
      public function index()
      {
         $users = $this->Users->find('all');
@@ -55,8 +57,6 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
  
             $user = $this->Users->patchEntity($user, $this->request->data);
-            debug($user);
-            debug($this->Users);
 
             if ($this->Users->save($user)) {
                 $this->Flash->success(__("L'utilisateur a été sauvegardé."));
@@ -85,10 +85,14 @@ class UsersController extends AppController
     /* Overtue session */
     public function login()
     {
+        $this->Auth->allow();
+        $this->viewBuilder()->layout('login');
+        //return $this->redirect( ['controller' => 'Login', 'action' => 'index']);
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Invalid username or password, try again'));
@@ -99,5 +103,17 @@ class UsersController extends AppController
     public function logout()
     {
         return $this->redirect($this->Auth->logout());
+    }
+
+
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
     }
 }

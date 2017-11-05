@@ -45,16 +45,20 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+            'authorize'=> 'Controller',
+            'authError' => 'Vous n\'avez pas le droit d\'accéder à cette page.',
             'loginRedirect' => [
-                'controller' => 'Login',
-                'action' => 'index'
+                'controller' => 'Main',
+                'action' => ''  
             ],
             'logoutRedirect' => [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home'
-            ]
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+            'unauthorizedRedirect' => $this->referer()
         ]);
+
+
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
@@ -84,5 +88,16 @@ class AppController extends Controller
         }
         $this->viewBuilder()->theme('AdminLTE');
         $this->set('theme', Configure::read('Theme'));
+    }
+
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
     }
 }

@@ -7,8 +7,7 @@ use Cake\Event\Event;
 class CandidatsController extends AppController
 {
     
-    public function initialize()
-        {
+    public function initialize() {
             parent::initialize();
             $this->loadComponent('Flash');
             $this->loadComponent('RequestHandler');
@@ -22,6 +21,20 @@ class CandidatsController extends AppController
         $this->Auth->allow(['logout']);
     }
 
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) 
+            && ($user['role'] === 'admin'
+            || $user['role'] === 'user'
+            || $user['role'] === 'register_agent'
+        )) {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
 
     // Liste des candidats.
     public function index()
@@ -50,6 +63,17 @@ class CandidatsController extends AppController
 
         if ($this->request->is(['post', 'put'])) {
             $this->Candidats->patchEntity($candidat, $this->request->data);
+
+            //$decoupePrenom = explode("-", $candidat->can_prenom);
+            $decoupePrenom = preg_split("/[\s,-]+/", $candidat->can_prenom);
+            $prenom = "";
+            foreach($decoupePrenom as $p) {
+                $prenom = $prenom.ucwords(strtolower($p))."-";
+            }
+            $prenom = substr($prenom, 0, -1); 
+
+            $candidat->can_nom = strtoupper($candidat->can_nom);
+            $candidat->can_prenom = $prenom;
 
             $this->loadModel('Categories');
             $annee = substr($candidat->can_datnaiss, -4);
@@ -112,6 +136,16 @@ class CandidatsController extends AppController
         if ($this->request->is('post')) {
  
             $candidat = $this->Candidats->patchEntity($candidat, $this->request->data, ['validate' => true]);
+
+            $decoupePrenom = preg_split("/[\s,-]+/", $candidat->can_prenom);
+            $prenom = "";
+            foreach($decoupePrenom as $p) {
+                $prenom = $prenom.ucwords(strtolower($p))."-";
+            }
+            $prenom = substr($prenom, 0, -1); 
+
+            $candidat->can_nom = strtoupper($candidat->can_nom);
+            $candidat->can_prenom = $prenom;
 
             $this->loadModel('Categories');
             $annee = substr($candidat->can_datnaiss, -4);

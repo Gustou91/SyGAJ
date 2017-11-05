@@ -16,7 +16,9 @@
 	        <div class="row">
 	        	<div class="col-md-6">
 			        <?= $this->Form->input('role', [
-	    		        'options' => ['user' => 'Utilisateur', 'admin' => 'Administrateur']
+	    		        'options' => ['user' => 'Utilisateur', 
+	    		        			'admin' => 'Administrateur',
+			    		        	'register_agent' => 'Agent en charge des inscriptions']
 				        ]) ?>
 	        	</div>
 	        </div>

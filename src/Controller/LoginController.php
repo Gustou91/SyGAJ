@@ -11,7 +11,25 @@ class LoginController extends AppController
 	/* Frmulaire d'identification */
 	public function index()
     {
+        $this->Auth->allow();
     	$this->viewBuilder()->layout('login');
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again'));
+        }
+    }
+
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+
+        // Par défaut refuser
+        return true;
     }
 
     /* Ajout d'un nouvel utilisateur */
