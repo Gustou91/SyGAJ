@@ -7,7 +7,7 @@
     <h3 class="box-title">Liste des poules - </h3> 
     <small><?php echo $this->Html->link('Constuire les poules', 
             array('controller' => 'poules', 
-                  'action' => 'allocateCandidates')); ?>
+                  'action' => 'allocateCandidates?categorie='.$categId)); ?>
     </small>
      - 
     <small><?php echo $this->Html->link('Composition des poules', 

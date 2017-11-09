@@ -50,6 +50,17 @@ $(document).ready(function(){
 	});
 
 
+	$('#listCategoriesCompo').change(function(event){
+		var value = $(this).val();
+		console.log('Event Change detected for listCategoriesCompo.');
+		console.log('Value = ', value);
+		var monUrl = "/SyGAJ/poules/group-composition?categorie="+value;
+		console.log('url = ', monUrl);
+
+		window.location = monUrl; 
+
+	});
+
 	$('#listMembers').change(function(event){
 		var value = $(this).val();
 		console.log('Event Change detected for listMembers.');

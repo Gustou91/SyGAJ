@@ -17,6 +17,7 @@ class PoulesController extends AppController
  
         }
 
+
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
@@ -120,6 +121,8 @@ class PoulesController extends AppController
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
 
+
+        // Récupération de la catégorie sélectionnée.
         if ($this->request->is(['get'])) {
             if (isset($this->request->query['categorie'])) {
                 //debug("Categorie = ".$this->request->query['categorie']);
@@ -183,12 +186,12 @@ class PoulesController extends AppController
         ]);
 
         if ($this->request->is(['get'])) {
-            if (isset($this->request->query['categorie'])) {
+            if (isset($this->request->query['categorie']) && $this->request->query['categorie'] != -1) {
                 //debug("Categorie = ".$this->request->query['categorie']);
                 $categId = $this->request->query['categorie'];
                 $poulesList->where(['pou_idcateg' => $categId]);
             } else {
-                $categId = "";
+                $categId = -1;
             }
         }
         /*
@@ -206,11 +209,33 @@ class PoulesController extends AppController
         /*debug($poulesList->toArray());
         die();*/
 
+        // Recherche des informations de la catégorie.
+        $this->loadModel('Categories');
+        $categories = $this->Categories->find('all');
+        if ($categId != -1) {
+            $categories->where(['id' => $categId]);
+            $categorie = $categories->first();
+            $this->set('categorie', $categorie);
+        }
+
         $this->set('poulesList', $poulesList);
 
-        $this->set('categId', $categId);
+        // Pour la liste des catégories.
+        $listCateg = $this->Categories->find('list', [
+            'keyField' => 'id',
+            'valueField' => function ($category) {
+                return $category->get('Label');
+            },
+            'order' => 'cat_nom ASC'
+        ]);
+
+        $data = $listCateg->toArray();
+        $this->set('listCateg', $data);
 
     } 
+
+
+
 
 
 
@@ -223,14 +248,27 @@ class PoulesController extends AppController
             debug($testPoule->aff_idpoule);
         }
         die();*/
-        $this->view = 'groups.ctp';
+        $this->viewBuilder()->template('groups');
+
+
+        // Récupération de la catégorie sélectionnée.
+        if ($this->request->is(['get'])) {
+            if (isset($this->request->query['categorie'])) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $categId = $this->request->query['categorie'];
+            } else {
+                $categId = "";
+            }
+        }
 
         // Recherche de la liste des candidats non affectés à une poule.
         $subquery = $this->Poules->Affectations->find()
         ->select(['Affectations.aff_idcandidat']);
 
         $candidats = $this->Poules->Affectations->Candidats->find()
-        ->where(['id NOT IN' => $subquery])
+        ->where([
+            'id NOT IN' => $subquery,
+            'left(can_clef, 1) =' => $categId])
         ->order(['can_clef']);
         //$this->log("Liste des candidats non affectés: ".$this->request);
 
@@ -239,6 +277,9 @@ class PoulesController extends AppController
         $maxEcartPoids = 3;   // Ecart max de poids entre le plus léger et le plus lourd dans la poule.
         $maxMemeClub = 2;     // Nombre max de candidat du même club dans la même poule.
         //$idPoule = -1;      // Id de la poule courante.
+
+        $idCateg = -1;
+
 
         foreach($candidats as $candidat) {
 
@@ -253,7 +294,18 @@ class PoulesController extends AppController
             $this->log("Poids du candidat courant       : ".$candidat->can_poids);
             $this->log("Nb max de candidats par poule   : ".$maxCandidats);
 
-            // Recherche d'une poule compatible pour le candidat.
+    
+            // Recherche des informations de la catégorie.
+            $this->loadModel('Categories');
+            $categorie = $this->Categories->get($idCateg);
+
+            if ($categorie->cat_mode == 'FFJDA') {
+
+                // Recherche d'une poule compatible pour le candidat (FFJDA).
+
+            } else {
+
+            // Recherche d'une poule compatible pour le candidat (MORPHO).
             $idPoule = $this->Poules->getAvailableGroup(
                 $idCateg, 
                 $candidat->can_sexe, 
@@ -263,6 +315,7 @@ class PoulesController extends AppController
                 $maxMemeClub,
                 $candidat->can_idclub);
 
+            }
             //debug($idPoule);
 
             if (isset($idPoule) && $idPoule > -1) {
@@ -307,13 +360,11 @@ class PoulesController extends AppController
         }
 
 
-        # Récupération de la liste des affectations pou affichage.
-        $poulesList = $this->Poules->find('all', [
-            'contain' =>['Affectations'],
-            'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
+        $this->redirect([
+            'contoller' => 'Poules',
+            'action' => 'groupComposition',
+            '?' => ['categorie' => $idCateg]
         ]);
-
-        $this->set('$poulesList', $poulesList);
 
     }
     

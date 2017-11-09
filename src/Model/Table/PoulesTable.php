@@ -34,10 +34,10 @@ class PoulesTable extends Table
 
         $this->connection = ConnectionManager::get('default');
         $req = "call getAvailableGroup(".$categId.", '".$sexe."', ".$poids.", ".$gigue.", ".$maxInGroup.", ".$maxCandSameClub.", ".$club.")";
-        debug($req);
+        //debug($req);
         $Poules = $this->connection->execute($req);
         $row = $Poules->fetch('assoc');
-        debug($row);
+        //debug($row);
         /*debug($row);
         debug($row["pouleId"]);
         die();*/

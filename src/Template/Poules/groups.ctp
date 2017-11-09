@@ -1,4 +1,6 @@
 <?php echo $this->Html->css('sygaj_theme'); ?>
+<?php echo $this->Html->script('AdminLTE./plugins/jQuery/jQuery-2.1.4.min'); ?>
+<?php echo $this->Html->script('sygaj'); ?>
 <?php echo $this->Html->css('vis-network.min.css'); ?>
 
 <?php echo $this->Html->script('vis-network.min.js'); ?>
@@ -6,14 +8,40 @@
 
 <div class="box">
   <div class="box-header">
-    <h3 class="box-title">Liste des poules</h3> 
-    <input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
-	<?php echo $this->Html->link('Imprimer', 
-		array('controller' => 'poules', 
-			  'action' => 'printPoules?categorie='.$categId, 
-			  'ext' => 'pdf'), 
-		array( "class"=>"pdf_report", "target"=>"_blank" ));
-	?>
+  	<?php
+  		if (isset($categorie)) {
+  			$catid = $categorie->id;
+  			$catname = $categorie->cat_nom;
+  		} else {
+  			$catid = "";
+  			$catname = "";
+  		}
+  	?>
+   	<div class="row">
+		<div class="input-group col-md-2">
+		    <h3 class="box-title">Liste des poules</h3> 
+		</div>
+	    <div class="input-group col-md-3">
+	        <span class="input-group-addon"><i class="fa fa-object-ungroup"></i></span>
+	        <?php echo $this->Form->select($catid, $listCateg, [
+	          'empty' => '(choisissez la catégorie)',
+	          'val' => $catid,
+	          'id' => 'listCategoriesCompo'
+	          ]); ?>
+	    </div>
+	    <div class="input-group col-md-1">
+	    	<input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
+		</div>
+	    <div class="input-group col-md-1">
+			<?php 		
+				echo $this->Html->link('Imprimer', 
+					array('controller' => 'poules', 
+					  'action' => 'printPoules?categorie='.$catid, 
+					  'ext' => 'pdf'), 
+					array( "class"=>"pdf_report", "target"=>"_blank" ));
+			?>
+		</div>
+	</div>
   </div>
 
 <div id="mynetwork"></div>
