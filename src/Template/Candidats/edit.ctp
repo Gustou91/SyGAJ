@@ -22,7 +22,7 @@
 			        echo $this->Form->select('can_sexe', $sexe, ['empty' => '(choisissez)']); ?>				
 		        </div>		        
 	        </div>
-
+	        <!--
 	    	<div class="row">
 		        <div class="input-group col-md-10">
 		        	<span class="input-group-addon"><i class="fa fa-building"></i></span>
@@ -62,7 +62,7 @@
 		        											 'class' => 'form-control')) ?>
 		        </div>
 	        </div>
-
+	        
 	    	<div class="row">
 		        <div class="input-group col-md-10">
 		        	<span class="input-group-addon"><i class="fa fa-phone"></i></span>
@@ -72,7 +72,7 @@
 		        											 'class' => 'form-control')) ?>
 		        </div>
 	        </div>
-
+			-->
 	    	<div class="row">
 		        <div class="input-group col-md-2">
 					<span class="input-group-addon"><i class="fa fa-tint"></i></span>
