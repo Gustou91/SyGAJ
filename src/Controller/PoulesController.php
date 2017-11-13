@@ -236,6 +236,21 @@ class PoulesController extends AppController
 
 
 
+    // Sauvegarde des modifications sur les poules.
+    public function updatePoules()
+    {
+
+        // Récupération des données su les poules.
+        if ($this->request->is(['post'])) {
+            $modifs = json_encode($query, JSON_PRETTY_PRINT);
+            $this->log("Modification des poules", 'debug');
+            $this->log($modifs, 'debug');
+            
+            $this->set('retour', 'Coucou');
+
+        }
+
+    }
 
 
 

@@ -61,11 +61,46 @@
     }
 
 
+	function objectToArray(obj) {
+		return Object.keys(obj).map(function (key) {
+			obj[key].id = key;
+			return obj[key];
+		});
+	}
+
 	function saveNetwork() {
 
 		alert("Bouton saveNetwork cliqué.");
-		var allNodes = nodes.get();
-		console.log(allNodes);
+		var nodes = objectToArray(network.getPositions());
+		nodes.forEach(addConnections);
+		var exportValue = JSON.stringify(nodes, undefined, 2);
+		console.log(exportValue);
+
+		var monUrl = "/SyGAJ/Poules/updatePoules";
+		$.ajax({
+			type: 'post',
+			url: monUrl,
+			data: exportValue,
+			dataType: 'json',
+			success: function (response) {
+				console.log("Succès");
+				$.each(response, function(index, object){
+	                console.log("Index= ".index);
+	                console.log(object);
+				})
+			},
+			error : function(resultat, statut, erreur){
+					console.log("Erreur");
+	                console.log("resultat = ".resultat);
+	                console.log("statut = ".statut);
+	                console.log("erreur = ".erreur);
+			},
+			complete : function(resultat, statut){
+					console.log("Terminé");
+	                console.log("resultat = ".resultat);
+	                console.log("statut = ".statut);
+			}			
+		})
     
 	}
 

@@ -11,7 +11,13 @@ class CandidatsTable extends Table
     public function validationDefault(Validator $validator)
     {
         return $validator
-            ->notEmpty('can_nom', "Le nom du candidat doit être renseigné.");
+            ->notEmpty('can_nom', "Le nom du combattant doit être renseigné.")
+            ->notEmpty('can_prenom', "Le nom du combattant doit être renseigné.")
+            ->notEmpty('can_sexe', "Garçon ou fille?")
+            ->notEmpty('can_idclub', "Choisissez le club.")
+            ->notEmpty('can_poids', "Saisissez le poids.")
+            ->notEmpty('can_datnaiss', "Saisissez la date de naissance.")
+            ->requirePresence(['can_sexe', 'can_idclub'], 'create');
     }
 
 
