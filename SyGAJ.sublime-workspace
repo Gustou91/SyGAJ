@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"th",
+				"thead\tTag"
+			],
+			[
 				"cat_",
 				"cat_adeb"
 			],
@@ -67,34 +71,16 @@
 			"file": "webroot/js/sygaj.js",
 			"settings":
 			{
-				"buffer_size": 2994,
+				"buffer_size": 3310,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Template/Layout/login.ctp",
+			"file": "src/Template/Poules/groups.ctp",
 			"settings":
 			{
-				"buffer_size": 3348,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout/login.ctp",
-			"settings":
-			{
-				"buffer_size": 3282,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Template/Users/login.ctp",
-			"settings":
-			{
-				"buffer_size": 708,
+				"buffer_size": 6004,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -121,7 +107,16 @@
 			"file": "src/Controller/PoulesController.php",
 			"settings":
 			{
-				"buffer_size": 10669,
+				"buffer_size": 12557,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Model/Table/PoulesTable.php",
+			"settings":
+			{
+				"buffer_size": 1645,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -136,15 +131,6 @@
 			}
 		},
 		{
-			"file": "src/Template/Poules/groups.ctp",
-			"settings":
-			{
-				"buffer_size": 4171,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 			"settings":
 			{
@@ -154,12 +140,64 @@
 			}
 		},
 		{
+			"file": "src/Template/Pages/tables/data.ctp",
+			"settings":
+			{
+				"buffer_size": 28202,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Candidats/index.ctp",
+			"settings":
+			{
+				"buffer_size": 3075,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Villes/index.ctp",
+			"settings":
+			{
+				"buffer_size": 2248,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Model/Table/CandidatsTable.php",
+			"settings":
+			{
+				"buffer_size": 1244,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Candidats/edit.ctp",
+			"settings":
+			{
+				"buffer_size": 5885,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 			"settings":
 			{
 				"buffer_size": 7075,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Template/Users/login.ctp",
+			"settings":
+			{
+				"buffer_size": 708,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -197,7 +235,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 392.0,
 		"last_filter": "Snippet: ",
 		"selected_items":
 		[
@@ -214,7 +252,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 432.0
+		"width": 428.0
 	},
 	"console":
 	{
@@ -236,27 +274,40 @@
 	"expanded_folders":
 	[
 		"/C/wamp64/www/SyGAJ",
+		"/C/wamp64/www/SyGAJ/logs",
 		"/C/wamp64/www/SyGAJ/src",
+		"/C/wamp64/www/SyGAJ/src/Model",
+		"/C/wamp64/www/SyGAJ/src/Template",
+		"/C/wamp64/www/SyGAJ/src/Template/Layout",
+		"/C/wamp64/www/SyGAJ/src/Template/Users",
 		"/C/wamp64/www/SyGAJ/src/View",
 		"/C/wamp64/www/SyGAJ/vendor",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout",
 		"/C/wamp64/www/SyGAJ/webroot",
-		"/C/wamp64/www/SyGAJ/webroot/admin_l_t_e"
+		"/C/wamp64/www/SyGAJ/webroot/plugins"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/SyGAJ/logs/debug.log",
+		"/C/wamp64/www/SyGAJ/src/Template/Users/login.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Layout/login.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout/login.ctp",
+		"/C/wamp64/bin/apache/apache2.4.23/conf/httpd.conf",
+		"/C/wamp64/logs/apache_error.log",
+		"/C/wamp64/bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf",
+		"/C/wamp64/alias/SyGAJ.conf",
+		"/C/wamp64/logs/access.log",
+		"/C/wamp64/www/SyGAJ/src/Template/Clubs/index.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Poules/index.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/webroot/js/AdminLTE.min.js",
 		"/C/wamp64/www/SyGAJ/src/Template/Challenges/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/AppController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/UsersTable.php",
-		"/C/wamp64/www/SyGAJ/src/Template/Poules/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Login/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/MainController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/UsersController.php",
@@ -277,7 +328,6 @@
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Affectation.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules/not_affected_candidates.ctp",
 		"/C/wamp64/www/SyGAJ/logs/error.log",
-		"/C/wamp64/www/SyGAJ/logs/debug.log",
 		"/C/wamp64/www/SyGAJ/src/Controller/ClubsController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/PoulesController.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Poule.php",
@@ -295,7 +345,6 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Candidats/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Clubs/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Clubs/add.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Clubs/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Membres/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/ChallengesTable.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/ChallengesController.php",
@@ -361,7 +410,6 @@
 		"/C/wamp64/www/SyGAJ/webroot/css/sygaj_theme.css",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/delete.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/view.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/login.ctp",
 		"/C/Users/bgarcin/AppData/Roaming/Sublime Text 3/Packages/User/snippet_php_echo.sublime-snippet",
 		"/C/wamp64/www/SyGAJ/src/Template/Element/nav-top.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php",
@@ -370,18 +418,11 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Login/add.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/config/bootstrap.php",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-main-sidebar.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-control-sidebar.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/README.md",
-		"/C/wamp64/bin/apache/apache2.4.23/bin/php.ini",
-		"/C/wamp64/www/SyGAJ/src/Template/Main/display.ctp",
-		"/C/wamp64/www/SyGAJ/src/Controller/MainMenuController.php",
-		"/C/wamp64/www/SyGAJ/SyGAJ.sublime-project"
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-main-sidebar.ctp"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -398,6 +439,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"bootstrap.php",
+			"can_sexe",
+			"Allow from ",
+			"Allow from 127.0.0.1",
+			"Poules\\groups.ctp",
 			"social",
 			"sidebarExpandOnHover",
 			"display",
@@ -528,7 +574,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -537,15 +583,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2994,
+						"buffer_size": 3310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1215,
-								923
+								289,
+								914
 							]
 						],
 						"settings":
@@ -553,103 +599,42 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 528.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/Template/Layout/login.ctp",
+					"file": "src/Template/Poules/groups.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3348,
+						"buffer_size": 6004,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2528,
-								2528
+								2416,
+								2416
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1122.0,
+						"translation.y": 1240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout/login.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3282,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1823,
-								1823
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 792.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/Template/Users/login.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								129,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "src/Controller/CandidatsController.php",
 					"semi_transient": false,
 					"settings":
@@ -661,8 +646,8 @@
 						"selection":
 						[
 							[
-								4199,
-								4199
+								1893,
+								2152
 							]
 						],
 						"settings":
@@ -672,14 +657,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2904.0,
+						"translation.y": 1040.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 3,
 					"file": "src/Controller/ClubsController.php",
 					"semi_transient": false,
 					"settings":
@@ -702,27 +687,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 317.0,
+						"translation.y": 200.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 4,
 					"file": "src/Controller/PoulesController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10669,
+						"buffer_size": 12557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								561,
-								561
+								7282,
+								7282
 							]
 						],
 						"settings":
@@ -732,14 +717,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 440.0,
+						"translation.y": 4520.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
+					"file": "src/Model/Table/PoulesTable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1290,
+								1290
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "src/Template/Poules/print_poules.ctp",
 					"semi_transient": false,
 					"settings":
@@ -760,42 +775,14 @@
 							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2706.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/Template/Poules/groups.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								156,
-								159
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 7,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 					"semi_transient": false,
 					"settings":
@@ -807,8 +794,8 @@
 						"selection":
 						[
 							[
-								11697,
-								11697
+								0,
+								5
 							]
 						],
 						"settings":
@@ -818,14 +805,163 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4774.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/Template/Pages/tables/data.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1074,
+								1081
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/Template/Candidats/index.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3075,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								389,
+								449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
+					"file": "src/Template/Villes/index.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								802,
+								1595
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/Model/Table/CandidatsTable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/Template/Candidats/edit.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2308,
+								2308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 					"semi_transient": false,
 					"settings":
@@ -837,8 +973,8 @@
 						"selection":
 						[
 							[
-								5042,
-								5143
+								6651,
+								6759
 							]
 						],
 						"settings":
@@ -848,14 +984,43 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2273.0,
+						"translation.y": 2400.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
+					"file": "src/Template/Users/login.ctp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
 					"file": "webroot/css/sygaj_theme.css",
 					"semi_transient": false,
 					"settings":
@@ -878,14 +1043,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 132.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "webroot/css/sygaj_pdf.css",
 					"semi_transient": false,
 					"settings":
@@ -911,11 +1076,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 17,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
 					"semi_transient": false,
 					"settings":
@@ -941,7 +1106,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -949,7 +1114,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -986,7 +1151,7 @@
 	"project": "SyGAJ.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
