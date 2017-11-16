@@ -35,6 +35,7 @@ class PoulesController extends AppController
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
 
+
         if ($this->request->is(['get'])) {
             if (isset($this->request->query['categorie'])) {
                 //debug("Categorie = ".$this->request->query['categorie']);
@@ -291,6 +292,7 @@ class PoulesController extends AppController
         $maxCandidats = 4;    // Nombre max de candidats par poule.
         $maxEcartPoids = 3;   // Ecart max de poids entre le plus léger et le plus lourd dans la poule.
         $maxMemeClub = 2;     // Nombre max de candidat du même club dans la même poule.
+        $poidsMin    = -1;    // Initialisation du poids min utilisé pour la création des poules.
         //$idPoule = -1;      // Id de la poule courante.
 
         $idCateg = -1;
@@ -316,9 +318,16 @@ class PoulesController extends AppController
 
             if ($categorie->cat_mode == 'FFJDA') {
 
-                // Recherche d'une poule compatible pour le candidat (FFJDA).
+                $range = $this->Poules->getWeightRange($poids);
+                $maxEcartPoids = $range["gigue"];
+                $poidsMin = $range["poidsMin"];
 
             } else {
+
+                // Type Morpho, le poids min de la poule est le poids du premier candidat
+                // de la poule.
+                $poidsMin = $candidat->can_poids;
+            }
 
             // Recherche d'une poule compatible pour le candidat (MORPHO).
             $idPoule = $this->Poules->getAvailableGroup(
@@ -330,7 +339,7 @@ class PoulesController extends AppController
                 $maxMemeClub,
                 $candidat->can_idclub);
 
-            }
+
             //debug($idPoule);
 
             if (isset($idPoule) && $idPoule > -1) {
@@ -342,11 +351,14 @@ class PoulesController extends AppController
 
                 // Pas de poule dispo, on en créé une nouvelle.
                 $this->log("Création d'une nouvelle poule.");
+                if ($categorie->cat_mode == 'FFJDA') {
+
                 $idPoule = -1;
                 $poule = $this->Poules->newEntity();
                 $poule->pou_idcateg = $idCateg;
                 $poule->pou_sexe = $candidat->can_sexe;
-                $poule->pou_poidsmin = $candidat->can_poids;
+                //$poule->pou_poidsmin = $candidat->can_poids;
+                $poule->pou_poidsmin = $poidsMin;
 
                 if ($this->Poules->save($poule)) {
                     $this->log("Création de la nouvelle poule réussie :".$poule->id);
