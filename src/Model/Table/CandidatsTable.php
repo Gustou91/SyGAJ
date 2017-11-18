@@ -17,6 +17,7 @@ class CandidatsTable extends Table
             ->notEmpty('can_idclub', "Choisissez le club.")
             ->notEmpty('can_poids', "Saisissez le poids.")
             ->notEmpty('can_datnaiss', "Saisissez la date de naissance.")
+            ->notEmpty('can_ceinture', "Saisissez la ceinture.")
             ->requirePresence(['can_sexe', 'can_idclub'], 'create');
     }
 

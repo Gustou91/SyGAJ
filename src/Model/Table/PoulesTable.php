@@ -31,22 +31,43 @@ class PoulesTable extends Table
 
     // Retourne les informations sur la tranche de poids correspondant à un candidat
     // en catégorie de type FFJA.
-    public function getWeightRange($poids)
+    public function getWeightRange($poids, $sexe)
     {
 
-        // Initialisation de la tables des tranches de poids pour les benjamins.
-        $WeightRanges = array(
-            30 => array( "poidsMin" => 0, "gigue" => 29 ),
-            34 => array( "poidsMin" => 30, "gigue" => 3 ),
-            38 => array( "poidsMin" => 34, "gigue" => 3 ),
-            42 => array( "poidsMin" => 38, "gigue" => 3 ),
-            46 => array( "poidsMin" => 42, "gigue" => 3 ),
-            50 => array( "poidsMin" => 46, "gigue" => 3 ),
-            55 => array( "poidsMin" => 50, "gigue" => 4 ),
-            60 => array( "poidsMin" => 55, "gigue" => 4 ),
-            66 => array( "poidsMin" => 60, "gigue" => 5 ),
-            "*" => array( "poidsMin" => 66, "gigue" => 100 )
-        );
+        if ($sexe == "H") {
+
+            // Initialisation de la tables des tranches de poids pour les benjamins.
+            $WeightRanges = array(
+                27 => array( "poidsMin" => 0, "gigue" => 26 ),
+                30 => array( "poidsMin" => 26, "gigue" => 3 ),
+                34 => array( "poidsMin" => 30, "gigue" => 3 ),
+                38 => array( "poidsMin" => 34, "gigue" => 3 ),
+                42 => array( "poidsMin" => 38, "gigue" => 3 ),
+                46 => array( "poidsMin" => 42, "gigue" => 3 ),
+                50 => array( "poidsMin" => 46, "gigue" => 3 ),
+                55 => array( "poidsMin" => 50, "gigue" => 4 ),
+                60 => array( "poidsMin" => 55, "gigue" => 4 ),
+                66 => array( "poidsMin" => 60, "gigue" => 5 ),
+                "*" => array( "poidsMin" => 66, "gigue" => 100 )
+            );
+
+        } else {
+
+            // Initialisation de la tables des tranches de poids pour les benjamines.
+            $WeightRanges = array(
+                28 => array( "poidsMin" => 0, "gigue" => 27 ),
+                32 => array( "poidsMin" => 27, "gigue" => 4 ),
+                36 => array( "poidsMin" => 32, "gigue" => 3 ),
+                40 => array( "poidsMin" => 36, "gigue" => 3 ),
+                44 => array( "poidsMin" => 40, "gigue" => 3 ),
+                48 => array( "poidsMin" => 44, "gigue" => 3 ),
+                52 => array( "poidsMin" => 48, "gigue" => 3 ),
+                57 => array( "poidsMin" => 52, "gigue" => 4 ),
+                63 => array( "poidsMin" => 57, "gigue" => 5 ),
+                "*" => array( "poidsMin" => 63, "gigue" => 100 )
+            );
+            
+        }
 
         /*debug($WeightRanges);
         debug($WeightRanges[30]);

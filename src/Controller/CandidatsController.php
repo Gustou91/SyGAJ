@@ -117,7 +117,7 @@ class CandidatsController extends AppController
                 return $club->get('Label');
             },
             'order' => 'clu_nom ASC'
-        ]);
+        ])->contain("Villes");
 
         $data = $clubs->toArray();
         $this->set('clubs', $data);
@@ -132,6 +132,10 @@ class CandidatsController extends AppController
     // Ajout d'un candidat.
     public function add()
     {
+
+        $messErr=".";
+
+
         $candidat = $this->Candidats->newEntity();
         if ($this->request->is('post')) {
  
@@ -154,13 +158,21 @@ class CandidatsController extends AppController
                     'cat_adeb <=' => $annee,
                     'cat_afin >=' => $annee]);
 
-            $candidat->can_clef = $categories->first()->id.'-'.$candidat->can_sexe.'-'.$candidat->can_poids;
+            if (isset($categories) ) {
 
-            if ($this->Candidats->save($candidat)) {
-                $this->Flash->success(__("Le candidat a été sauvegardé."));
-                return $this->redirect(['action' => 'index']);
+                if ($categories->count() > 0) {
+
+                    $candidat->can_clef = $categories->first()->id.'-'.$candidat->can_sexe.'-'.$candidat->can_poids;
+
+                    if ($this->Candidats->save($candidat)) {
+                        $this->Flash->success(__("Le candidat a été sauvegardé."));
+                        return $this->redirect(['action' => 'add']);
+                    }
+                } else {
+                    $messErr = "(vérifier la date de naissance).";
+                }
             }
-            $this->Flash->error(__("Impossible d'ajouter le candidat."));
+            $this->Flash->error(__("Impossible d'ajouter le candidat ".$messErr));
         }
         $this->set('candidat', $candidat);
 
@@ -188,7 +200,8 @@ class CandidatsController extends AppController
                 return $club->get('Label');
             },
             'order' => 'clu_nom ASC'
-        ]);
+        ])->contain("Villes");
+
 
         $data = $clubs->toArray();
         $this->set('clubs', $data);

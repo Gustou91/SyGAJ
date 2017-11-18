@@ -318,7 +318,8 @@ class PoulesController extends AppController
 
             if ($categorie->cat_mode == 'FFJDA') {
 
-                $range = $this->Poules->getWeightRange($poids);
+                $this->log("Mode FFJDA");
+                $range = $this->Poules->getWeightRange($candidat->can_poids, $candidat->can_sexe);
                 $maxEcartPoids = $range["gigue"];
                 $poidsMin = $range["poidsMin"];
 
@@ -326,6 +327,7 @@ class PoulesController extends AppController
 
                 // Type Morpho, le poids min de la poule est le poids du premier candidat
                 // de la poule.
+                $this->log("Mode Morpho");
                 $poidsMin = $candidat->can_poids;
             }
 
@@ -351,24 +353,23 @@ class PoulesController extends AppController
 
                 // Pas de poule dispo, on en créé une nouvelle.
                 $this->log("Création d'une nouvelle poule.");
-                if ($categorie->cat_mode == 'FFJDA') {
 
-                $idPoule = -1;
-                $poule = $this->Poules->newEntity();
-                $poule->pou_idcateg = $idCateg;
-                $poule->pou_sexe = $candidat->can_sexe;
-                //$poule->pou_poidsmin = $candidat->can_poids;
-                $poule->pou_poidsmin = $poidsMin;
+                    $idPoule = -1;
+                    $poule = $this->Poules->newEntity();
+                    $poule->pou_idcateg = $idCateg;
+                    $poule->pou_sexe = $candidat->can_sexe;
+                    //$poule->pou_poidsmin = $candidat->can_poids;
+                    $poule->pou_poidsmin = $poidsMin;
 
-                if ($this->Poules->save($poule)) {
-                    $this->log("Création de la nouvelle poule réussie :".$poule->id);
-                    $idPoule = $poule->id;
-                } 
+                    if ($this->Poules->save($poule)) {
+                        $this->log("Création de la nouvelle poule réussie :".$poule->id);
+                        $idPoule = $poule->id;
+                    }
             }
 
 
             # Si la poule a bien été créée ou récupérée.
-            if ($idPoule != -1) {
+            if (isset($idPoule) && $idPoule != -1) {
 
                 # Ajout du candidat dans la poule.
                 $this->log("Ajout du candidat ".$candidat->id." ".$candidat->can_nom." ".$candidat->can_prenom." dans la poule ".$idPoule.".");

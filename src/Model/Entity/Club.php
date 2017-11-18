@@ -10,7 +10,8 @@ class Club extends Entity
 
     protected function _getLabel()
     {
-    	return $this->_properties['clu_nom'];
+
+    	return $this->_properties['clu_nom']." (".$this->ville->_properties['vil_nom'].")";
     }
 
 }

@@ -11,7 +11,8 @@ class ClubsTable extends Table
     public function validationDefault(Validator $validator)
     {
         return $validator
-            ->notEmpty('clu_nom', "Le nom du club doit être renseigné.");
+            ->notEmpty('clu_nom', "Le nom du club doit être renseigné.")
+            ->notEmpty('clu_ville', "La ville du club doit être renseignée.");
     }
 
 
