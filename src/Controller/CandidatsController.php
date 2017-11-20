@@ -42,8 +42,35 @@ class CandidatsController extends AppController
 
 
         $candidats = $this->Candidats->find('all', ['contain' =>['Clubs']]);
-
         $this->set('candidats', $candidats);
+
+        // Nombre de mini-poussins.
+        $query = $this->Candidats->find('all', [
+            'conditions' => ['can_clef LIKE' => "1%"]
+        ]);
+        $nbMiniPoussins = $query->count();
+        $this->set('nbMiniPoussins', $nbMiniPoussins);
+
+        // Nombre de poussinets.
+        $query = $this->Candidats->find('all', [
+            'conditions' => ['can_clef LIKE' => "2%"]
+        ]);
+        $nbPoussinets = $query->count();
+        $this->set('nbPoussinets', $nbPoussinets);
+
+        // Nombre de poussin.
+        $query = $this->Candidats->find('all', [
+            'conditions' => ['can_clef LIKE' => "3%"]
+        ]);
+        $nbPoussins = $query->count();
+        $this->set('nbPoussins', $nbPoussins);
+
+        // Nombre de benjamins.
+        $query = $this->Candidats->find('all', [
+            'conditions' => ['can_clef LIKE' => "4%"]
+        ]);
+        $nbBenjamins = $query->count();
+        $this->set('nbBenjamins', $nbBenjamins);
         
 
     }

@@ -7,6 +7,48 @@
                   'action' => 'add')); ?>
     </small>
   </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+      <!-- Apply any bg-* class to to the icon to color it -->
+        <span class="info-box-icon bg-green"><i class="fa fa-male"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Mini-Poussins</span>
+          <span class="info-box-number"><?php echo $nbMiniPoussins ?></span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+      <!-- Apply any bg-* class to to the icon to color it -->
+        <span class="info-box-icon bg-green"><i class="fa fa-male"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Poussinets</span>
+          <span class="info-box-number"><?php echo $nbPoussinets ?></span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+      <!-- Apply any bg-* class to to the icon to color it -->
+        <span class="info-box-icon bg-green"><i class="fa fa-male"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Poussins</span>
+          <span class="info-box-number"><?php echo $nbPoussins ?></span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+      <!-- Apply any bg-* class to to the icon to color it -->
+        <span class="info-box-icon bg-green"><i class="fa fa-male"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Benjamins</span>
+          <span class="info-box-number"><?php echo $nbBenjamins ?></span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+    </div>
   <!-- /.box-header -->
   <div class="box-body col-xs-12">
     <table id="listCandidats" class="table table-bordered table-hover" role="grid">
