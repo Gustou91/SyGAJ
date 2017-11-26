@@ -18,7 +18,8 @@
 			        <?= $this->Form->input('role', [
 	    		        'options' => ['user' => 'Utilisateur', 
 	    		        			'admin' => 'Administrateur',
-			    		        	'register_agent' => 'Agent en charge des inscriptions']
+			    		        	'register_agent' => 'Agent en charge des inscriptions',
+			    		        	'challenge_master' => 'Organisateur challenge']
 				        ]) ?>
 	        	</div>
 	        </div>

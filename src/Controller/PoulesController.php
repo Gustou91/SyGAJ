@@ -26,11 +26,25 @@ class PoulesController extends AppController
     }
 
 
+
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) 
+            && ($user['role'] === 'admin'
+            || $user['role'] ===  'challenge_master'
+        )) {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
+
     // Liste des poules.
     public function index()
     {
 
-        $poules = $this->Poules->find('all', [
+            $poules = $this->Poules->find('all', [
             'contain' =>['Categories'],
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
@@ -298,6 +312,7 @@ class PoulesController extends AppController
         $idCateg = -1;
 
 
+        $this->log("Boucle sur les candidats: ".$candidats->count());
         foreach($candidats as $candidat) {
 
 
@@ -331,6 +346,9 @@ class PoulesController extends AppController
                 $poidsMin = $candidat->can_poids;
             }
 
+            $this->log("Poids min = ".$poidsMin);
+            $this->log("Gigue = ".$maxEcartPoids);
+
             // Recherche d'une poule compatible pour le candidat (MORPHO).
             $idPoule = $this->Poules->getAvailableGroup(
                 $idCateg, 
@@ -354,17 +372,17 @@ class PoulesController extends AppController
                 // Pas de poule dispo, on en créé une nouvelle.
                 $this->log("Création d'une nouvelle poule.");
 
-                    $idPoule = -1;
-                    $poule = $this->Poules->newEntity();
-                    $poule->pou_idcateg = $idCateg;
-                    $poule->pou_sexe = $candidat->can_sexe;
-                    //$poule->pou_poidsmin = $candidat->can_poids;
-                    $poule->pou_poidsmin = $poidsMin;
+                $idPoule = -1;
+                $poule = $this->Poules->newEntity();
+                $poule->pou_idcateg = $idCateg;
+                $poule->pou_sexe = $candidat->can_sexe;
+                //$poule->pou_poidsmin = $candidat->can_poids;
+                $poule->pou_poidsmin = $poidsMin;
 
-                    if ($this->Poules->save($poule)) {
-                        $this->log("Création de la nouvelle poule réussie :".$poule->id);
-                        $idPoule = $poule->id;
-                    }
+                if ($this->Poules->save($poule)) {
+                    $this->log("Création de la nouvelle poule réussie :".$poule->id);
+                    $idPoule = $poule->id;
+                }
             }
 
 

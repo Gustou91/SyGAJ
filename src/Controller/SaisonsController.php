@@ -15,6 +15,20 @@ class SaisonsController extends AppController
     }
 
 
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) 
+            && ($user['role'] === 'admin'
+        )) {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
+
+
+
      public function index()
      {
         $saisons = $this->Saisons->find('all');

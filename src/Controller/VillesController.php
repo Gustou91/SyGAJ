@@ -15,6 +15,22 @@ class VillesController extends AppController
     }
 
 
+    public function isAuthorized($user) {
+        // Admin peuvent accéder à chaque action
+        if (isset($user['role']) 
+            && ($user['role'] === 'admin'
+            || $user['role'] === 'user'
+            || $user['role'] ===  'challenge_master'
+        )) {
+            return true;
+        }
+
+        // Par défaut refuser
+        return false;
+    }
+
+
+
      public function index()
      {
         $villes = $this->Villes->find('all');

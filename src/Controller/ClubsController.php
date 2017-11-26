@@ -29,6 +29,7 @@ class ClubsController extends AppController
         if (isset($user['role']) 
             && ($user['role'] === 'admin'
             || $user['role'] === 'user'
+            || $user['role'] ===  'challenge_master'
         )) {
             return true;
         }

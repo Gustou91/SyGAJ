@@ -4,6 +4,7 @@ namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Datasource\ConnectionManager;
+use Cake\Core\App;
 
 class PoulesTable extends Table
 {
@@ -69,12 +70,15 @@ class PoulesTable extends Table
             
         }
 
-        /*debug($WeightRanges);
-        debug($WeightRanges[30]);
+        $invertedWeightRanges = array_reverse ( $WeightRanges , true );
+
+        //debug($WeightRanges);
+        /*debug($WeightRanges[30]);
         die();*/
-        foreach ($WeightRanges as $range) {
-            if ($poids < key($range) )
+        foreach ($invertedWeightRanges as $range) {
+           if ($poids >= $range["poidsMin"] )
             {
+                //$this->log("getWeightRange(): Poids = ".$range["poidsMin"]." gigue = ".$range["gigue"]);
                 return $range;
             }
         }
@@ -93,12 +97,14 @@ class PoulesTable extends Table
         $this->connection = ConnectionManager::get('default');
         $req = "call getAvailableGroup(".$categId.", '".$sexe."', ".$poids.", ".$gigue.", ".$maxInGroup.", ".$maxCandSameClub.", ".$club.")";
         //debug($req);
+        //$this->log("getAvailableGroup(): req = ".$req);
+        //Log::write('debug', 'getAvailableGroup(): req = '.$req);
         $Poules = $this->connection->execute($req);
         $row = $Poules->fetch('assoc');
+        
         //debug($row);
-        /*debug($row);
-        debug($row["pouleId"]);
-        die();*/
+        //debug($row["pouleId"]);
+        /*die();*/
 
         if (isset($row)) {
             $pouleId = $row["pouleId"];
@@ -110,5 +116,6 @@ class PoulesTable extends Table
 
         return $pouleId;
     }
+
 
 }

@@ -28,6 +28,7 @@ class CandidatsController extends AppController
             && ($user['role'] === 'admin'
             || $user['role'] === 'user'
             || $user['role'] === 'register_agent'
+            || $user['role'] ===  'challenge_master'
         )) {
             return true;
         }

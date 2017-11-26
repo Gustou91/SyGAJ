@@ -125,7 +125,7 @@
 			foreach ($poule->affectations as $affectation) {
 
 				# Ajout de l'élément candidat.
-				echo "nodes.push({id: ".$affectation->id.", label: \"".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
+				echo "nodes.push({id: ".$affectation->id.", label: \"".$affectation->candidat->id." - ".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
 
 	
 				# Raccrochage à l'élément poule.
