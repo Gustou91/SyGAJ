@@ -30,9 +30,6 @@
 	          ]); ?>
 	    </div>
 	    <div class="input-group col-md-1">
-	    	<input type="button" id="save_button" onclick="saveNetwork()" value="Sauver"></input>
-		</div>
-	    <div class="input-group col-md-1">
 			<?php 		
 				echo $this->Html->link('Imprimer', 
 					array('controller' => 'poules', 
@@ -54,55 +51,31 @@
 
     saveButton = document.getElementById('save_button');
 
-
-    function addConnections(elem, index) {
-        // need to replace this with a tree of the network, then get child direct children of the element
-        elem.connections = network.getConnectedNodes(index);
+    function onAjaxSuccess(response){
+    	console.log("Succès");
+		$.each(response, function(index, object){
+            console.log("Index= "+index);
+            console.log(object);
+		});
     }
 
+ 	function onEdgeEdit(edgeData,callback){
 
-	function objectToArray(obj) {
-		return Object.keys(obj).map(function (key) {
-			obj[key].id = key;
-			return obj[key];
-		});
-	}
-
-	function saveNetwork() {
-
-		alert("Bouton saveNetwork cliqué.");
-		var nodes = objectToArray(network.getPositions());
-		nodes.forEach(addConnections);
-		var exportValue = JSON.stringify(nodes, undefined, 2);
-		console.log(exportValue);
-
+    	let json = JSON.stringify(edgeData);
 		var monUrl = "/SyGAJ/Poules/updatePoules";
-		$.ajax({
-			type: 'post',
-			url: monUrl,
-			data: exportValue,
-			dataType: 'json',
-			success: function (response) {
-				console.log("Succès");
-				$.each(response, function(index, object){
-	                console.log("Index= ".index);
-	                console.log(object);
-				})
-			},
-			error : function(resultat, statut, erreur){
-					console.log("Erreur");
-	                console.log("resultat = ".resultat);
-	                console.log("statut = ".statut);
-	                console.log("erreur = ".erreur);
-			},
-			complete : function(resultat, statut){
-					console.log("Terminé");
-	                console.log("resultat = ".resultat);
-	                console.log("statut = ".statut);
-			}			
-		})
-    
-	}
+		console.log("sending changed edge data : " + json);
+		$.post(monUrl, json, onAjaxSuccess, "json");
+		callback(edgeData);
+    }
+
+ 	function onDeleteNode(nodeData,callback){
+
+    	let json = JSON.stringify(nodeData);
+		var monUrl = "/SyGAJ/Poules/deletePoule";
+		console.log("Envoie des données de la poule à supprimer : " + json);
+		$.post(monUrl, json, onAjaxSuccess, "json");
+		callback(nodeData);
+    }
 
     <?php
 	    $noItem = 0;
@@ -129,7 +102,9 @@
 
 	
 				# Raccrochage à l'élément poule.
-				echo "edges.push({from: ".$affectation->id.", arrows:\"to\", to: ".$poule->id."});\n";
+				$edge = "{from: ".$affectation->id.", arrows:\"to\", to: ".$poule->id."}";
+				$this->log("Edge = ".$edge, "debug");
+				echo "edges.push(".$edge.");\n";
 
 				$noItem ++;
 
@@ -182,23 +157,21 @@
             shadow:true
         },
         manipulation: {
-		    addEdge: function(edgeData,callback) {
-		    	if (edgeData.from === edgeData.to) {
-		        	//var r = confirm("Do you want to connect the node to itself?");
-		        	//if (r === true) {
-		        	//	callback(edgeData);
-		        	//}
-		      	}
-		      	else {
-		        	callback(edgeData);
-		    	}
-    		},
-    		editEdge: true,
-    		addNode: false
-		}  
-
+		   
+    		editEdge: onEdgeEdit,
+    		addEdge: false,
+    		deleteEdge: false,
+    		editNode: false,
+    		addNode: false,
+    		deleteNode: onDeleteNode
+		}
     };
     network = new vis.Network(container, data, options);
+
+    network.on("click", function (params) {
+        network.editEdgeMode();
+    });
+
 </script>
 </div>
 

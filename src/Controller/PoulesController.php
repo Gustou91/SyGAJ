@@ -257,12 +257,26 @@ class PoulesController extends AppController
 
         // Récupération des données su les poules.
         if ($this->request->is(['post'])) {
-            $modifs = json_encode($query, JSON_PRETTY_PRINT);
-            $this->log("Modification des poules", 'debug');
-            $this->log($modifs, 'debug');
-            
-            $this->set('retour', 'Coucou');
+            $connexion = $this->request->input('json_decode');
+            $this->log($connexion, 'debug');
 
+            $this->log("Modification des poules", 'debug');
+            
+            $idPoule = $connexion->to;
+            $idAffectation = $connexion->from;
+
+            $this->log("idPoule = ".$idPoule, 'debug');
+            $this->log("idAffectation = ".$idAffectation, 'debug');
+
+            $this->loadModel('Affectations');
+            $affectation = $this->Affectations->get($idAffectation);
+            $affectation->aff_idpoule = $idPoule;
+
+            if ($this->Affectations->save($affectation)) {
+                $this->Flash->success(__("Le candidat a été réaffecté."));
+                return $this->redirect(['action' => 'groupComposition']);
+            }
+            
         }
 
     }
@@ -423,9 +437,33 @@ class PoulesController extends AppController
     }
  
 
+    public function deletePoule() {
+
+        $node = $this->request->input('json_decode');
+        $this->log($node, 'debug');
+
+        $idPoule = $node->nodes[0];
+        $this->log("Suppression de la poule ".$idPoule, 'debug');
+        
+        // Chargement de la poule à supprimer.
+        $poule = $this->Poules->get($idPoule);
+        $this->log("Chargement poule ".$poule->id, 'debug');
+
+        // Suppresion de la poule.
+        if ($this->Poules->delete($poule)) {
+            $this->Flash->success(__("La poule a été supprimée."));
+            return $this->redirect(['action' => 'groupComposition']);
+        }
+
+    }
+
+
     // Suppression d'une poule.
     public function delete($id)
     {
+
+        $this->log("Demande de suppression de la poule ".$idPoule, 'debug');
+
         // Chargement de la poule à supprimer.
         $poule = $this->Poules->get($id);
 
