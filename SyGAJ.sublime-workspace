@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"debu",
+				"debugger"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"ed",
+				"edge"
+			],
+			[
 				"th",
 				"thead\tTag"
 			],
@@ -68,82 +92,6 @@
 	"buffers":
 	[
 		{
-			"file": "webroot/js/sygaj.js",
-			"settings":
-			{
-				"buffer_size": 3310,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Template/Poules/groups.ctp",
-			"settings":
-			{
-				"buffer_size": 6004,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "2017-11-19 18:16:06 Error: Nom du candidat courant         : AIT BRAHAM Imane\n2017-11-19 18:16:06 Error: Clef du candidat courant        : 4-F-30\n2017-11-19 18:16:06 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:06 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:06 Error: Poids du candidat courant       : 30\n2017-11-19 18:16:06 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:06 Error: Mode FFJDA\n2017-11-19 18:16:06 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:06 Error: Création de la nouvelle poule réussie :694\n2017-11-19 18:16:06 Error: Ajout du candidat 189 AIT BRAHAM Imane dans la poule 694.\n\n2017-11-19 18:16:06 Error: Nom du candidat courant         : CHARLET Noellia\n2017-11-19 18:16:06 Error: Clef du candidat courant        : 4-F-33\n2017-11-19 18:16:06 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:06 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:06 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:06 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:06 Error: Mode FFJDA\n2017-11-19 18:16:06 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:06 Error: Création de la nouvelle poule réussie :695\n\n2017-11-19 18:16:06 Error: Nom du candidat courant         : PACHER Maeva\n2017-11-19 18:16:06 Error: Clef du candidat courant        : 4-F-34\n2017-11-19 18:16:06 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:06 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:06 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:06 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:06 Error: Mode FFJDA\n2017-11-19 18:16:06 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:06 Error: Création de la nouvelle poule réussie :696\n2017-11-19 18:16:06 Error: Ajout du candidat 162 PACHER Maeva dans la poule 696.\n2017-11-19 18:16:06 Error: Nom du candidat courant         : ACHER Oceane\n2017-11-19 18:16:06 Error: Clef du candidat courant        : 4-F-34\n2017-11-19 18:16:06 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:06 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:06 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:06 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:06 Error: Mode FFJDA\n2017-11-19 18:16:06 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:06 Error: Création de la nouvelle poule réussie :697\n2017-11-19 18:16:07 Error: Ajout du candidat 167 ACHER Oceane dans la poule 697.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : DELABROUILLE Celia\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-F-46\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 46\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :698\n2017-11-19 18:16:07 Error: Ajout du candidat 165 DELABROUILLE Celia dans la poule 698.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : GEORGES Pauline\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-F-46\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 46\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :699\n2017-11-19 18:16:07 Error: Ajout du candidat 170 GEORGES Pauline dans la poule 699.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : GESLIN Emma\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-F-46\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : F\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 46\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :700\n2017-11-19 18:16:07 Error: Ajout du candidat 187 GESLIN Emma dans la poule 700.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : DADOU Josselin\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-25\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 25\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :701\n2017-11-19 18:16:07 Error: Ajout du candidat 103 DADOU Josselin dans la poule 701.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : DENIS Pierre\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-28\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 28\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :702\n2017-11-19 18:16:07 Error: Ajout du candidat 119 DENIS Pierre dans la poule 702.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : SIMON Matheo\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-29\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 29\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :703\n2017-11-19 18:16:07 Error: Ajout du candidat 112 SIMON Matheo dans la poule 703.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : BERTIAUX Titouan\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-29\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 29\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :704\n2017-11-19 18:16:07 Error: Ajout du candidat 124 BERTIAUX Titouan dans la poule 704.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : SY Abdoul-Karim\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-30\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 30\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :705\n2017-11-19 18:16:07 Error: Ajout du candidat 78 SY Abdoul-Karim dans la poule 705.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : CRANçON Leo\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-30\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 30\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :706\n2017-11-19 18:16:07 Error: Ajout du candidat 116 CRANçON Leo dans la poule 706.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : KAID SLIMANE Ilade\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-30\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 30\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :707\n2017-11-19 18:16:07 Error: Ajout du candidat 123 KAID SLIMANE Ilade dans la poule 707.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : MARC Alois\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-31\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 31\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :708\n2017-11-19 18:16:07 Error: Ajout du candidat 27 MARC Alois dans la poule 708.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : BETTAOUI  Wael\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-31\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 31\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :709\n2017-11-19 18:16:07 Error: Ajout du candidat 32 BETTAOUI  Wael dans la poule 709.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : PEIXOTOT AUBERT Vasco\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-31\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 31\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :710\n2017-11-19 18:16:07 Error: Ajout du candidat 126 PEIXOTOT AUBERT Vasco dans la poule 710.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : BAZIN Kyllian\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-31\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 31\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:07 Error: Création de la nouvelle poule réussie :711\n2017-11-19 18:16:07 Error: Ajout du candidat 134 BAZIN Kyllian dans la poule 711.\n2017-11-19 18:16:07 Error: Nom du candidat courant         : BASCOUL Clement\n2017-11-19 18:16:07 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:07 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:07 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:07 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:07 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:07 Error: Mode FFJDA\n2017-11-19 18:16:07 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :712\n2017-11-19 18:16:08 Error: Ajout du candidat 25 BASCOUL Clement dans la poule 712.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : JULLIEN Clement\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :713\n2017-11-19 18:16:08 Error: Ajout du candidat 28 JULLIEN Clement dans la poule 713.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : RAGOT Jules\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :714\n2017-11-19 18:16:08 Error: Ajout du candidat 29 RAGOT Jules dans la poule 714.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : RASSER VASQUEZ Ingo\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :715\n2017-11-19 18:16:08 Error: Ajout du candidat 34 RASSER VASQUEZ Ingo dans la poule 715.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : DEJEAN Victor\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :716\n2017-11-19 18:16:08 Error: Ajout du candidat 40 DEJEAN Victor dans la poule 716.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : COURQUIN Florian\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :717\n2017-11-19 18:16:08 Error: Ajout du candidat 128 COURQUIN Florian dans la poule 717.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : DIAS DA CRUZ Keylian\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-32\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 32\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :718\n2017-11-19 18:16:08 Error: Ajout du candidat 130 DIAS DA CRUZ Keylian dans la poule 718.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : MARTIN Nathaniel\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-33\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :719\n2017-11-19 18:16:08 Error: Ajout du candidat 30 MARTIN Nathaniel dans la poule 719.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : FICHAUX Ethan\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-33\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :720\n2017-11-19 18:16:08 Error: Ajout du candidat 31 FICHAUX Ethan dans la poule 720.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : FATA Enzo\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-33\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :721\n2017-11-19 18:16:08 Error: Ajout du candidat 35 FATA Enzo dans la poule 721.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : SUC Enzo\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-33\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :722\n2017-11-19 18:16:08 Error: Ajout du candidat 81 SUC Enzo dans la poule 722.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : JACQUEMIER Alexandre\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-33\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 33\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :723\n2017-11-19 18:16:08 Error: Ajout du candidat 133 JACQUEMIER Alexandre dans la poule 723.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : HANIN Mathieu\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-34\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :724\n2017-11-19 18:16:08 Error: Ajout du candidat 26 HANIN Mathieu dans la poule 724.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : CHAPELLE Kentin\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-34\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :725\n2017-11-19 18:16:08 Error: Ajout du candidat 37 CHAPELLE Kentin dans la poule 725.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : DORIGO Enzo\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-34\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:08 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:08 Error: Mode FFJDA\n2017-11-19 18:16:08 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:08 Error: Création de la nouvelle poule réussie :726\n2017-11-19 18:16:08 Error: Ajout du candidat 43 DORIGO Enzo dans la poule 726.\n2017-11-19 18:16:08 Error: Nom du candidat courant         : LE ROY Leo-Paul\n2017-11-19 18:16:08 Error: Clef du candidat courant        : 4-H-34\n2017-11-19 18:16:08 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:08 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:08 Error: Poids du candidat courant       : 34\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :727\n2017-11-19 18:16:09 Error: Ajout du candidat 138 LE ROY Leo-Paul dans la poule 727.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : LEGUILLOCHET Clement\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-35\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 35\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :728\n2017-11-19 18:16:09 Error: Ajout du candidat 33 LEGUILLOCHET Clement dans la poule 728.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : FAVIER Gael\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-35\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 35\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :729\n2017-11-19 18:16:09 Error: Ajout du candidat 36 FAVIER Gael dans la poule 729.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : RECUZE Hugo\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-35\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 35\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :730\n2017-11-19 18:16:09 Error: Ajout du candidat 84 RECUZE Hugo dans la poule 730.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : MARTINEAU Ethan\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-35\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 35\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :731\n2017-11-19 18:16:09 Error: Ajout du candidat 136 MARTINEAU Ethan dans la poule 731.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : CHAUBET Emilien\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-37\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 37\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :732\n2017-11-19 18:16:09 Error: Ajout du candidat 146 CHAUBET Emilien dans la poule 732.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : ABIMANA Hugues\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-39\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 39\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :733\n2017-11-19 18:16:09 Error: Ajout du candidat 92 ABIMANA Hugues dans la poule 733.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : BOURDON Nolan\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-41\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 41\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :734\n2017-11-19 18:16:09 Error: Ajout du candidat 61 BOURDON Nolan dans la poule 734.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : GULAM Naiil\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-43\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 43\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :735\n2017-11-19 18:16:09 Error: Ajout du candidat 47 GULAM Naiil dans la poule 735.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : BOYER Evan\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-45\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 45\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :736\n2017-11-19 18:16:09 Error: Ajout du candidat 46 BOYER Evan dans la poule 736.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : LUKAWSKI Lucas\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-45\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 45\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :737\n2017-11-19 18:16:09 Error: Ajout du candidat 75 LUKAWSKI Lucas dans la poule 737.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : COURLY Nathan\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-47\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 47\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :738\n2017-11-19 18:16:09 Error: Ajout du candidat 73 COURLY Nathan dans la poule 738.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : COINTRE Gabriel\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-48\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 48\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :739\n2017-11-19 18:16:09 Error: Ajout du candidat 71 COINTRE Gabriel dans la poule 739.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : BAILLIVET Enzo\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-53\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 53\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :740\n2017-11-19 18:16:09 Error: Ajout du candidat 70 BAILLIVET Enzo dans la poule 740.\n2017-11-19 18:16:09 Error: Nom du candidat courant         : DELAFORGE Nicolas\n2017-11-19 18:16:09 Error: Clef du candidat courant        : 4-H-56\n2017-11-19 18:16:09 Error: Catégorie du candidat courant   : 4\n2017-11-19 18:16:09 Error: Sexe du candidat courant        : H\n2017-11-19 18:16:09 Error: Poids du candidat courant       : 56\n2017-11-19 18:16:09 Error: Nb max de candidats par poule   : 4\n2017-11-19 18:16:09 Error: Mode FFJDA\n2017-11-19 18:16:09 Error: Création d'une nouvelle poule.\n2017-11-19 18:16:09 Error: Création de la nouvelle poule réussie :741\n2017-11-19 18:16:09 Error: Ajout du candidat 50 DELAFORGE Nicolas dans la poule 741.\n",
-			"file": "logs/error.log",
-			"file_size": 87445,
-			"file_write_time": 131560853887830270,
-			"settings":
-			{
-				"buffer_size": 30909,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Model/Table/PoulesTable.php",
-			"settings":
-			{
-				"buffer_size": 3863,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Controller/PoulesController.php",
-			"settings":
-			{
-				"buffer_size": 13145,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nEmmet\n-----\n\n  Thank you for installing Emmet -- a toolkit that can greatly improve your workflow. Note that this plugin automatically downloads and installs PyV8 binary (see status bar message). \n  \n  ******************************\n  Please restart editor \n  to finish installation process \n  after PyV8 was downloaded.\n  ******************************\n  \n  Tab key handler\n  ==========================\n  \n  By default, Emmet allows you to expand abbreviations with Tab key in HTML, XML, HAML and CSS/SASS/LESS/Stylus documents. As a side effect, you can’t use some of your ST2 snippets.\n  \n  Please read https://github.com/sergeche/emmet-sublime#tab-key-handler about how Tab handler works and how to tweak its behavior to match your needs.\n  \n  Enter key\n  ==========================\n  \n  In HTML and XML documents, Emmet overrides Enter key to insert formatted line breaks between opening and closing tags. In some cases it will break character input (for example, in Japanese language).\n  \n  To disable Enter key handler, simply add the following option in your user's Preferences file:\n  \n  \"disable_formatted_linebreak\": true\n  \n  Actions shortcuts\n  ==========================\n  \n  Emmet has a number of actions with keyboard shortcuts that may override ones you're using commonly (for example, Ctrl-E or Ctrl-Down). Please read the project main page to get list of available actions and keyboard shortcuts and how to disable them:\n  https://github.com/sergeche/emmet-sublime\n  \n  Documentation and examples:\n  http://emmet.io\n  \n  ------------------------------\n  Follow me on Twitter: @emmetio\n  ------------------------------\n\n\nEmmet Css Snippets\n------------------\n\n  \n  Emmet CSS Snippets\n  \n  Thank you for installing Emmet CSS Snippets. This package is an alternative for Emmet and a few snippet triggers were changed, please check the cheat sheet at http://p233.github.io/Emmet-Css-Snippets-for-Sublime-Text-2/\n  \n  ## Features\n  \n  * Works with default CSS package, [LESS](https://sublime.wbond.net/packages/LESS), and [Syntax Highlighting for Sass](https://sublime.wbond.net/packages/Syntax%20Highlighting%20for%20Sass)\n  * Two versions: `has-Prefix` or `no-Prefix`\n  * Smart completion rule: propery snippes will no longer popup when you typing propery values\n  * Pseudo class completions\n  * Extra propery value completions\n  \n  ## Prefix\n  \n  If you intend to use snippets with no prefix, add `has-Prefix` into the ignored_packages list of your settings file. The other way round, if you intend to use snippets with prefix, add `no-Prefix` into the ignored_packages list.\n  \n  -------------\n  Enjoy coding!\n",
-			"settings":
-			{
-				"buffer_size": 2679,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/Template/Candidats/index.ctp",
-			"settings":
-			{
-				"buffer_size": 4993,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Template/Poules/print_poules.ctp",
-			"settings":
-			{
-				"buffer_size": 21001,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 			"settings":
 			{
@@ -161,15 +109,6 @@
 			}
 		},
 		{
-			"file": "src/Template/Candidats/edit.ctp",
-			"settings":
-			{
-				"buffer_size": 5885,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 			"settings":
 			{
@@ -179,19 +118,28 @@
 			}
 		},
 		{
-			"file": "webroot/css/sygaj_theme.css",
+			"file": "webroot/css/sygaj_pdf.css",
 			"settings":
 			{
-				"buffer_size": 385,
+				"buffer_size": 300,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "webroot/css/sygaj_pdf.css",
+			"file": "webroot/js/sygaj.js",
 			"settings":
 			{
-				"buffer_size": 300,
+				"buffer_size": 3310,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Poules/print_poules.ctp",
+			"settings":
+			{
+				"buffer_size": 21018,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -238,7 +186,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 428.0
+		"width": 444.0
 	},
 	"console":
 	{
@@ -261,42 +209,54 @@
 	"expanded_folders":
 	[
 		"/C/wamp64/www/SyGAJ",
+		"/C/wamp64/www/SyGAJ/config",
 		"/C/wamp64/www/SyGAJ/logs",
 		"/C/wamp64/www/SyGAJ/src",
 		"/C/wamp64/www/SyGAJ/src/Controller",
 		"/C/wamp64/www/SyGAJ/src/Model",
-		"/C/wamp64/www/SyGAJ/src/Model/Entity",
 		"/C/wamp64/www/SyGAJ/src/Model/Table",
 		"/C/wamp64/www/SyGAJ/src/Template",
-		"/C/wamp64/www/SyGAJ/src/Template/Candidats",
-		"/C/wamp64/www/SyGAJ/webroot"
+		"/C/wamp64/www/SyGAJ/src/Template/Poules",
+		"/C/wamp64/www/SyGAJ/webroot",
+		"/C/wamp64/www/SyGAJ/webroot/js"
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/SyGAJ/src/Model/Table/ClubsTable.php",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/AffectationsTable.php",
+		"/C/wamp64/www/SyGAJ/logs/debug.log",
+		"/C/wamp64/www/SyGAJ/src/Template/Poules/groups.ctp",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/PoulesTable.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/PoulesController.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Candidats/edit.ctp",
+		"/C/wamp64/www/SyGAJ/webroot/js/sygaj.js",
+		"/C/wamp64/www/SyGAJ/logs/error.log",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/UsersTable.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/ClubsController.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
+		"/C/wamp64/www/SyGAJ/src/Controller/VillesController.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/SaisonsController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/CandidatsController.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Users/edit.ctp",
+		"/C/wamp64/www/SyGAJ/webroot/css/sygaj_theme.css",
+		"/C/wamp64/bin/apache/apache2.4.23/conf/httpd.conf",
+		"/C/wamp64/www/SyGAJ/src/Template/Poules/index.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Candidats/index.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Poules/print_poules.ctp",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/ClubsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Club.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/CandidatsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Villes/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Candidats/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Controller/ClubsController.php",
-		"/C/wamp64/www/SyGAJ/logs/debug.log",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/login.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/login.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout/login.ctp",
-		"/C/wamp64/bin/apache/apache2.4.23/conf/httpd.conf",
 		"/C/wamp64/logs/apache_error.log",
 		"/C/wamp64/bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf",
 		"/C/wamp64/alias/SyGAJ.conf",
 		"/C/wamp64/logs/access.log",
 		"/C/wamp64/www/SyGAJ/src/Template/Clubs/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Poules/index.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/webroot/js/AdminLTE.min.js",
 		"/C/wamp64/www/SyGAJ/src/Template/Challenges/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/AppController.php",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/edit.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
-		"/C/wamp64/www/SyGAJ/src/Model/Table/UsersTable.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Login/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/MainController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/UsersController.php",
@@ -310,19 +270,14 @@
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Challenge.php",
 		"/C/wamp64/www/SyGAJ/config/routes.php",
 		"/C/wamp64/www/SyGAJ/config/bootstrap.php",
-		"/C/wamp64/www/SyGAJ/src/Model/Table/PoulesTable.php",
-		"/C/wamp64/www/SyGAJ/src/Model/Table/AffectationsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Affectation.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules/not_affected_candidates.ctp",
-		"/C/wamp64/www/SyGAJ/logs/error.log",
-		"/C/wamp64/www/SyGAJ/src/Controller/PoulesController.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Poule.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Candidat.php",
 		"/C/wamp64/www/SyGAJ/webroot/js/sygaj-ui.js",
 		"/C/wamp64/www/SyGAJ/src/Template/Categories/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Categories/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/CategoriesController.php",
-		"/C/wamp64/www/SyGAJ/src/Template/Candidats/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/categoriesTable.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Membres/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Candidats/add.ctp",
@@ -344,13 +299,11 @@
 		"/C/wamp64/www/SyGAJ/src/Model/Table/MembresTable.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/MembresController.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Ville.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/VillesController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Villes/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Villes/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/InscriptionsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Saisons/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/VillesTable.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/SaisonsController.php",
 		"/C/wamp64/www/SyGAJ/webroot/js/AdminLTE.min.js",
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/default.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Membre.php",
@@ -389,7 +342,6 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/lockscreen.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Element/footer.ctp",
 		"/C/wamp64/www/SyGAJ/src/View/Membres/index.ctp",
-		"/C/wamp64/www/SyGAJ/webroot/css/sygaj_theme.css",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/delete.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/view.ctp",
 		"/C/Users/bgarcin/AppData/Roaming/Sublime Text 3/Packages/User/snippet_php_echo.sublime-snippet",
@@ -397,14 +349,11 @@
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/View/Helper.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/Component/SessionComponent.php",
-		"/C/wamp64/www/SyGAJ/src/Template/Login/add.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/config/bootstrap.php",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-main-sidebar.ctp"
+		"/C/wamp64/www/SyGAJ/src/Template/Login/add.ctp"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -421,6 +370,14 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"to:",
+			"1359",
+			"exportValue",
+			"debugger",
+			"register_agent",
+			"admin",
+			"BAZ",
+			"BAZIN",
 			"/SyGAJ",
 			"/admin_l_t_e/css/skins/skin",
 			"bootstrap.php",
@@ -558,244 +515,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "webroot/js/sygaj.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								289,
-								914
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/Template/Poules/groups.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2416,
-								2416
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "logs/error.log",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1215,
-								1215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/Model/Table/PoulesTable.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								860,
-								874
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 486.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/Controller/PoulesController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10473,
-								10473
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5654.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2679,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2679,
-								2679
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/Template/Candidats/index.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4993,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3122,
-								3122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1098.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/Template/Poules/print_poules.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21001,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1762,
-								1762
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 					"semi_transient": false,
 					"settings":
@@ -821,11 +545,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 1,
 					"file": "src/Template/Pages/tables/data.ctp",
 					"semi_transient": false,
 					"settings":
@@ -848,43 +572,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 200.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "src/Template/Candidats/edit.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3180,
-								3189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1312.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
+					"buffer": 2,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 					"semi_transient": false,
 					"settings":
@@ -907,44 +602,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2190.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "webroot/css/sygaj_theme.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								385,
-								385
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
+					"buffer": 3,
 					"file": "webroot/css/sygaj_pdf.css",
 					"semi_transient": false,
 					"settings":
@@ -970,11 +635,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 4,
+					"file": "webroot/js/sygaj.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								3310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Template/Poules/print_poules.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20152,
+								20152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8899.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
 					"semi_transient": false,
 					"settings":
@@ -1000,7 +723,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1008,7 +731,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -1045,7 +768,7 @@
 	"project": "SyGAJ.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":

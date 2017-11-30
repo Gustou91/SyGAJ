@@ -460,7 +460,7 @@
 
 			<!-- Ligne 5 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">4</td>
+				<td align='center' rowspan='2' style="width: 1cm;">5</td>
 				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[3]["Nom"]."<br>".$rowList[3]["Club"] ?></td>
 				<td align='center' style="width: 1cm;background-color: #000000;"></td>
 				<td align='center' style="width: 1cm;background-color: #000000;"></td>
@@ -497,7 +497,7 @@
 
 
 	<!-- Les poules supérieures à 5 membres ne sont pas gérées. -->
-	<?php if ( count($poule->affectations) > 5 ) { 
+	<?php if ( isset($poule) && count($poule->affectations) > 5 ) { 
 		echo "<br><br><br><br><br><h1 id=\"error\">".$rowList[0]["Nom"]." doit être affecté(e) à une autre poule.</h1>";		
 	} ?>
 
