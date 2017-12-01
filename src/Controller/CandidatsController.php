@@ -100,7 +100,9 @@ class CandidatsController extends AppController
             }
             $prenom = substr($prenom, 0, -1); 
 
-            $candidat->can_nom = strtoupper($candidat->can_nom);
+            $nom = strtoupper($candidat->can_nom);
+            $this->log($candidat->can_nom." ->".$nom, "debug");
+            $candidat->can_nom = $nom;
             $candidat->can_prenom = $prenom;
 
             $this->loadModel('Categories');

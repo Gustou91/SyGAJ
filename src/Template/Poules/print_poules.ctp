@@ -305,8 +305,8 @@
 		<table>
 			<!-- Entête -->
 			<tr>
-				<th align='center' rowspan='2' style="width: 1cm;">N°</th>
-				<th align='center' rowspan='2' style="width: 8cm;">Nom prénom<br>Club</th>
+				<th align='center' rowspan='2' style="width: 0.5cm;">N°</th>
+				<th align='center' rowspan='2' style="width: 6cm;">Nom prénom<br>Club</th>
 				<th align='center' style="width: 1cm;">1</th>
 				<th align='center' style="width: 1cm;">2</th>
 				<th align='center' style="width: 1cm;">4</th>
@@ -336,18 +336,18 @@
 
 			<!-- Ligne 1 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">1</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[0]["Nom"]."<br>".$rowList[0]["Club"] ?></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
+				<td align='center' rowspan='2'>1</td>
+				<td align='left' rowspan='2'><?php echo $rowList[0]["Nom"]."<br>".$rowList[0]["Club"] ?></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
@@ -367,18 +367,18 @@
 
 			<!-- Ligne 2 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">2</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[1]["Nom"]."<br>".$rowList[1]["Club"] ?></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
+				<td align='center' rowspan='2'<td>2</td>
+				<td align='left' rowspan='2'><?php echo $rowList[1]["Nom"]."<br>".$rowList[1]["Club"] ?></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
@@ -398,18 +398,18 @@
 
 			<!-- Ligne 3 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">3</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[2]["Nom"]."<br>".$rowList[2]["Club"] ?></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
+				<td align='center' rowspan='2'<td>3</td>
+				<td align='left' rowspan='2'><?php echo $rowList[2]["Nom"]."<br>".$rowList[2]["Club"] ?></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
@@ -429,18 +429,18 @@
 
 			<!-- Ligne 4 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">4</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[3]["Nom"]."<br>".$rowList[3]["Club"] ?></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
+				<td align='center' rowspan='2'<td>4</td>
+				<td align='left' rowspan='2'><?php echo $rowList[3]["Nom"]."<br>".$rowList[3]["Club"] ?></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
@@ -460,18 +460,18 @@
 
 			<!-- Ligne 5 -->
 			<tr>
-				<td align='center' rowspan='2' style="width: 1cm;">5</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[3]["Nom"]."<br>".$rowList[3]["Club"] ?></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
-				<td align='center' style="width: 1cm;"></td>
-				<td align='center' style="width: 1cm;background-color: #000000;"></td>
+				<td align='center' rowspan='2'<td>5</td>
+				<td align='left' rowspan='2'><?php echo $rowList[4]["Nom"]."<br>".$rowList[3]["Club"] ?></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
+				<td align='center'<td></td>
+				<td align='center' style="background-color: #000000;"></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>
