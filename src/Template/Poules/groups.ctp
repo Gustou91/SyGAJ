@@ -97,11 +97,14 @@
 			# Boucle sur les affectations pour la poule courante.
 			foreach ($poule->affectations as $affectation) {
 
-				# Ajout de l'élément candidat.
-				echo "nodes.push({id: ".$affectation->id.", label: \"".$affectation->candidat->id." - ".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup."});\n";
+				// Ajout de l'élément candidat.
+				$image = "/SyGAJ/img/avatar.png";
+				$image = $affectation->candidat->can_sexe == "F" ? "/SyGAJ/img/F.png" : "/SyGAJ/img/H.png";
+
+				echo "nodes.push({id: ".$affectation->id.", label: \"".$affectation->candidat->id." - ".$affectation->candidat->can_nom." ".$affectation->candidat->can_prenom." - ".$affectation->candidat->can_poids."kg\\n".$affectation->candidat->club->clu_nom."\", group: ".$noGroup.", image: '".$image."', shape: 'image'});\n";
 
 	
-				# Raccrochage à l'élément poule.
+				// Raccrochage à l'élément poule.
 				$edge = "{from: ".$affectation->id.", arrows:\"to\", to: ".$poule->id."}";
 				$this->log("Edge = ".$edge, "debug");
 				echo "edges.push(".$edge.");\n";
@@ -164,7 +167,8 @@
     		editNode: false,
     		addNode: false,
     		deleteNode: onDeleteNode
-		}
+		},
+
     };
     network = new vis.Network(container, data, options);
 

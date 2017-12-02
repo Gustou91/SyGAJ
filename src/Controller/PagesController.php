@@ -39,6 +39,9 @@ class PagesController extends AppController
      */
     public function display()
     {
+
+        $this->log("PagesController: display()", "debug");
+
         $path = func_get_args();
 
         $count = count($path);

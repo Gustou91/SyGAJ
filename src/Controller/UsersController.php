@@ -88,20 +88,47 @@ class UsersController extends AppController
         $this->Auth->allow();
         $this->viewBuilder()->layout('login');
         //return $this->redirect( ['controller' => 'Login', 'action' => 'index']);
+
+
         if ($this->request->is('post')) {
+
             $user = $this->Auth->identify();
+
             if ($user) {
+
+                $this->loadModel('Logs');
+                $log = $this->Logs->newEntity();
+                $log->log_userId = $user["id"];
+                $log->log_action = "LOGIN";
+                $log->log_srcip = $_SERVER["REMOTE_ADDR"];
+                
+
+                if ($this->Logs->save($log)) {
+                    //$this->Flash->success(__("L'utilisateur a été sauvegardé."));
+                }
+
                 $this->Auth->setUser($user);
 
                 return $this->redirect($this->Auth->redirectUrl());
             }
-            $this->Flash->error(__('Invalid username or password, try again'));
+            $this->Flash->error(__('Login ou mot de passe invalide, veuillez essayer de nouveau.'));
         }
     }
 
     /* Fermeture session */
     public function logout()
     {
+
+        $this->loadModel('Logs');
+        $log = $this->Logs->newEntity();
+        $log->log_userId = $this->Auth->user('id');
+        $log->log_action = "LOGOUT";
+        $log->log_srcip = $_SERVER["REMOTE_ADDR"];
+
+        if ($this->Logs->save($log)) {
+            //$this->Flash->success(__("L'utilisateur a été sauvegardé."));
+        }
+
         return $this->redirect($this->Auth->logout());
     }
 
