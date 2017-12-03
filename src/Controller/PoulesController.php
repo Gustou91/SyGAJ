@@ -462,7 +462,7 @@ class PoulesController extends AppController
     public function delete($id)
     {
 
-        $this->log("Demande de suppression de la poule ".$idPoule, 'debug');
+        $this->log("Demande de suppression de la poule ".$id, 'debug');
 
         // Chargement de la poule à supprimer.
         $poule = $this->Poules->get($id);

@@ -51,6 +51,8 @@
 
     saveButton = document.getElementById('save_button');
 
+
+    // Dans le cas où la requête ajax réussit.
     function onAjaxSuccess(response){
     	console.log("Succès");
 		$.each(response, function(index, object){
@@ -59,6 +61,8 @@
 		});
     }
 
+
+    // Au moment de l'édition d'un lien.
  	function onEdgeEdit(edgeData,callback){
 
     	let json = JSON.stringify(edgeData);
@@ -68,15 +72,29 @@
 		callback(edgeData);
     }
 
+
+    // Lors de la suppression d'un noeud.
  	function onDeleteNode(nodeData,callback){
 
     	let json = JSON.stringify(nodeData);
-		var monUrl = "/SyGAJ/Poules/deletePoule";
-		console.log("Envoie des données de la poule à supprimer : " + json);
-		$.post(monUrl, json, onAjaxSuccess, "json");
-		callback(nodeData);
+
+ 		let nbEdges = nodeData.edges.length;
+ 		console.log("Nombre de liens = " + nbEdges);
+
+ 		if (nbEdges == 0) {
+
+			var monUrl = "/SyGAJ/Poules/deletePoule";
+			console.log("Envoie des données de la poule à supprimer : " + json);
+			$.post(monUrl, json, onAjaxSuccess, "json");
+			callback(nodeData);
+
+		} else {
+			alert("Cette poule n'est pas vide et ne peut être supprimée.");
+		}
     }
 
+
+    // Alimentation des tableaux pour affichage des poules.
     <?php
 	    $noItem = 0;
 	    $noGroup = 0;

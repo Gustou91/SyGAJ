@@ -43,7 +43,8 @@ class LogsController extends AppController
     {
 
 
-        $logs = $this->Logs->find('all', ['contain' =>['Users']]);
+        $logs = $this->Logs->find('all', ['contain' =>['Users']])
+                           ->order(['logs.created' => 'DESC']);
 
         $this->set('logs', $logs);
         
