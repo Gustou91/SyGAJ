@@ -126,6 +126,8 @@ class PoulesController extends AppController
     public function printPoules()
     {
 
+        ini_set('memory_limit', '1536M');
+        set_time_limit(1000);
         $this->viewBuilder()->template('print_poules');
         $this->response->type('application/pdf');
 
@@ -200,6 +202,7 @@ class PoulesController extends AppController
             'order' => ['pou_idcateg, pou_sexe, pou_poidsmin' => 'ASC']
         ]);
 
+        //debug($this->request);
         if ($this->request->is(['get'])) {
             if (isset($this->request->query['categorie']) && $this->request->query['categorie'] != -1) {
                 //debug("Categorie = ".$this->request->query['categorie']);
@@ -208,7 +211,23 @@ class PoulesController extends AppController
             } else {
                 $categId = -1;
             }
+            if (isset($this->request->query['sexe']) && $this->request->query['sexe'] != "") {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $sexe = $this->request->query['sexe'];
+                $poulesList->where(['pou_sexe' => $sexe]);
+            } else {
+                $sexe = -1;
+            }
+            if (isset($this->request->query['poidsMin']) && $this->request->query['poidsMin'] != 0) {
+                //debug("Categorie = ".$this->request->query['categorie']);
+                $pMin = $this->request->query['poidsMin'];
+                $poulesList->where(['pou_poidsmin' => $pMin]);
+            } else {
+                $pMin = 0;
+            }
         }
+        $this->set('sexeId', $sexe);
+        $this->set('pMin', $pMin);
         /*
         $poulesList = $this->Poules->find('all', [
             'contain' =>['Affectations'],
@@ -319,7 +338,7 @@ class PoulesController extends AppController
         //$nbCandidats = 0;   // Nombre de candidats dans la poule courante.
         $maxCandidats = 4;    // Nombre max de candidats par poule.
         $maxEcartPoids = 3;   // Ecart max de poids entre le plus léger et le plus lourd dans la poule.
-        $maxMemeClub = 2;     // Nombre max de candidat du même club dans la même poule.
+        $maxMemeClub = 1;     // Nombre max de candidat du même club dans la même poule.
         $poidsMin    = -1;    // Initialisation du poids min utilisé pour la création des poules.
         //$idPoule = -1;      // Id de la poule courante.
 

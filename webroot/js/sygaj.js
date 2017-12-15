@@ -52,14 +52,57 @@ $(document).ready(function(){
 
 	$('#listCategoriesCompo').change(function(event){
 		var value = $(this).val();
+		let sexe = $('#listSexe').val();
+		let poids = $('#poids').val();
+		console.log("sexe = " + sexe);
 		console.log('Event Change detected for listCategoriesCompo.');
 		console.log('Value = ', value);
-		var monUrl = "/SyGAJ/poules/group-composition?categorie="+value;
+		var monUrl = "/SyGAJ/poules/group-composition?categorie="+value
+			+"&sexe="+sexe
+			+"&poidsMin="+poids;
 		console.log('url = ', monUrl);
 
 		window.location = monUrl; 
 
 	});
+
+
+
+	$('#listSexe').change(function(event){
+		console.log("Changment dans la liste des sexes.");
+		var value = $(this).val();
+		let categId = $('#listCategoriesCompo').val();
+		let poids = $('#poids').val();
+		console.log("categ = " + categId);
+		console.log('Event Change detected for listCategoriesCompo.');
+		console.log('Value = ', value);
+		var monUrl = "/SyGAJ/poules/group-composition?sexe="+value
+			+"&categorie="+categId
+			+"&poidsMin="+poids;
+		console.log('url = ', monUrl);
+
+		window.location = monUrl; 
+
+	});
+
+
+	$('#poids').change(function(event){
+		console.log("Changment dans la liste des sexes.");
+		var value = $(this).val();
+		let sexe = $('#listSexe').val();
+		let categId = $('#listCategoriesCompo').val();
+		console.log("categ = " + categId);
+		console.log('Event Change detected for listCategoriesCompo.');
+		console.log('Value = ', value);
+		var monUrl = "/SyGAJ/poules/group-composition?sexe="+sexe
+			+"&categorie="+categId
+			+"&poidsMin="+value;
+		console.log('url = ', monUrl);
+
+		window.location = monUrl; 
+
+	});
+
 
 	$('#listMembers').change(function(event){
 		var value = $(this).val();

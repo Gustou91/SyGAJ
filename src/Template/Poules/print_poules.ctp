@@ -63,7 +63,7 @@
 			<!-- Ligne 2 -->
 			<tr>
 				<td align='center' rowspan='2' style="width: 1cm;">1</td>
-				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[0]["Nom"]."<br>".$rowList[0]["Club"] ?></td>
+				<td align='left' rowspan='2' style="width: 8cm;"><?php echo $rowList[1]["Nom"]."<br>".$rowList[1]["Club"] ?></td>
 				<td align='center' style="width: 1cm;"></td>
 				<td align='center' rowspan='2'></td>
 				<td align='center' rowspan='2'></td>

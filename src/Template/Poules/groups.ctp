@@ -16,6 +16,16 @@
   			$catid = "";
   			$catname = "";
   		}
+   		if (isset($sexeId)) {
+  			$sexe = $sexeId;
+  		} else {
+  			$sexe = "";
+  		}
+   		if (isset($pMin)) {
+  			$poids = $pMin;
+  		} else {
+  			$poids = 0;
+  		}
   	?>
    	<div class="row">
 		<div class="input-group col-md-2">
@@ -28,6 +38,32 @@
 	          'val' => $catid,
 	          'id' => 'listCategoriesCompo'
 	          ]); ?>
+	    </div>
+	    <div class="input-group col-md-2">
+	        <span class="input-group-addon"><i class="fa fa-object-ungroup"></i></span>
+	        <?php 
+	        	$sexes = array('H' => 'Garçon', 
+									  'F' => 'Fille');
+	        	echo $this->Form->select($sexe, $sexes, [
+	          'empty' => '(choisissez le sexe)',
+	          'val' => $sexe,
+	          'id' => 'listSexe'
+	          ]); ?>
+	    </div>
+	    <div class="input-group col-md-2">
+	    	<span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+			<?php 
+				echo $this->Form->input(
+					'$poids', 
+					array(
+						'label' => false, 
+					 	'placeholder' => 'Poids min', 
+					 	'type' => 'number', 
+					 	'class' => 'form-control',
+					 	'id' => 'poids'
+					 )
+				); 
+			?>
 	    </div>
 	    <div class="input-group col-md-1">
 			<?php 		

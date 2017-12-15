@@ -95,7 +95,7 @@
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/sidebar-menu.ctp",
 			"settings":
 			{
-				"buffer_size": 11697,
+				"buffer_size": 11833,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -112,7 +112,7 @@
 			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
 			"settings":
 			{
-				"buffer_size": 7075,
+				"buffer_size": 7092,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -136,20 +136,55 @@
 			}
 		},
 		{
-			"file": "src/Template/Poules/print_poules.ctp",
+			"file": "src/Template/Poules/groups.ctp",
 			"settings":
 			{
-				"buffer_size": 21018,
+				"buffer_size": 5790,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
+			"file": "src/Controller/PoulesController.php",
 			"settings":
 			{
-				"buffer_size": 602,
+				"buffer_size": 14961,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Template/Poules/print_poules.ctp",
+			"settings":
+			{
+				"buffer_size": 20162,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 6513 files for \"ini_set\"\n\nC:\\wamp64\\www\\SyGAJ\\config\\bootstrap.php:\n  113   * formatted and sets the default language to use for translations.\n  114   */\n  115: ini_set('intl.default_locale', Configure::read('App.defaultLocale'));\n  116  \n  117  /*\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Console\\ShellDispatcher.php:\n  142          }\n  143  \n  144:         if (function_exists('ini_set')) {\n  145:             ini_set('html_errors', false);\n  146:             ini_set('implicit_flush', true);\n  147:             ini_set('max_execution_time', 0);\n  148          }\n  149  \n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Core\\Configure.php:\n   52  \n   53      /**\n   54:      * Flag to track whether or not ini_set exists.\n   55       *\n   56       * @return void\n   ..\n   94          if (isset($config['debug'])) {\n   95              if (static::$_hasIniSet === null) {\n   96:                 static::$_hasIniSet = function_exists('ini_set');\n   97              }\n   98              if (static::$_hasIniSet) {\n   99:                 ini_set('display_errors', $config['debug'] ? 1 : 0);\n  100              }\n  101          }\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Error\\BaseErrorHandler.php:\n  247  \n  248          if ($units === 'K') {\n  249:             ini_set('memory_limit', ceil($current + $additionalKb) . 'K');\n  250          }\n  251      }\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Error\\Debugger.php:\n  100          $docRef = ini_get('docref_root');\n  101  \n  102:         if (empty($docRef) && function_exists('ini_set')) {\n  103:             ini_set('docref_root', 'http://php.net/');\n  104          }\n  105          if (!defined('E_RECOVERABLE_ERROR')) {\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Network\\Session.php:\n  269  \n  270      /**\n  271:      * Calls ini_set for each of the keys in `$options` and set them\n  272       * to the respective value in the passed array.\n  273       *\n  ...\n  289  \n  290          foreach ($options as $setting => $value) {\n  291:             if (ini_set($setting, $value) === false) {\n  292                  throw new RuntimeException(\n  293                      sprintf('Unable to configure the session, setting %s failed.', $setting)\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\tests\\bootstrap.php:\n  131  MutableDate::setTestNow(MutableDate::now());\n  132  \n  133: ini_set('intl.default_locale', 'en_US');\n  134  \n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\debug_kit\\src\\Controller\\ComposerController.php:\n  110          set_time_limit(300);\n  111          $memoryLimit = ini_get('memory_limit');\n  112:         ini_set('memory_limit', '512M');\n  113  \n  114          $output = new BufferedOutput();\n  ...\n  120          chdir($dir);\n  121          set_time_limit($timeLimit);\n  122:         ini_set('memory_limit', $memoryLimit);\n  123  \n  124          return $output;\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\bin\\compile:\n   21  \n   22  error_reporting(-1);\n   23: ini_set('display_errors', 1);\n   24  \n   25  try {\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\bin\\composer:\n   21  unset($xdebug);\n   22  \n   23: if (function_exists('ini_set')) {\n   24:     @ini_set('display_errors', 1);\n   25  \n   26      $memoryInBytes = function ($value) {\n   ..\n   44      // Increase memory_limit if it is lower than 1.5GB\n   45      if ($memoryLimit != -1 && $memoryInBytes($memoryLimit) < 1024 * 1024 * 1536) {\n   46:         @ini_set('memory_limit', '1536M');\n   47      }\n   48      unset($memoryInBytes, $memoryLimit);\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\src\\Composer\\Compiler.php:\n  244  if (extension_loaded('apc') && ini_get('apc.enable_cli') && ini_get('apc.cache_by_default')) {\n  245      if (version_compare(phpversion('apc'), '3.0.12', '>=')) {\n  246:         ini_set('apc.cache_by_default', 0);\n  247      } else {\n  248          fwrite(STDERR, 'Warning: APC <= 3.0.12 may cause fatal errors when running composer commands.'.PHP_EOL);\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\src\\Composer\\Console\\Application.php:\n   63          static $shutdownRegistered = false;\n   64  \n   65:         if (function_exists('ini_set') && extension_loaded('xdebug')) {\n   66:             ini_set('xdebug.show_exception_trace', false);\n   67:             ini_set('xdebug.scream', false);\n   68          }\n   69  \n\nC:\\wamp64\\www\\SyGAJ\\vendor\\fpdf\\font\\makefont\\makefont.php:\n  300  \t//Generate a font definition file\n  301  \tset_magic_quotes_runtime(0);\n  302: \tini_set('auto_detect_line_endings','1');\n  303  \tif($enc)\n  304  \t{\n\n\n\nSearching 6513 files for \"memory_limit\"\n\nC:\\wamp64\\www\\SyGAJ\\phpunit.xml.dist:\n    8      >\n    9      <php>\n   10:         <ini name=\"memory_limit\" value=\"-1\"/>\n   11          <ini name=\"apc.enable_cli\" value=\"1\"/>\n   12      </php>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\bake\\src\\Template\\Bake\\Plugin\\phpunit.xml.dist.ctp:\n   23      >\n   24      <php>\n   25:         <ini name=\"memory_limit\" value=\"-1\"/>\n   26          <ini name=\"apc.enable_cli\" value=\"1\"/>\n   27      </php>\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\cakephp\\src\\Error\\BaseErrorHandler.php:\n  222  \n  223      /**\n  224:      * Increases the PHP \"memory_limit\" ini setting by the specified amount\n  225       * in kilobytes\n  226       *\n  ...\n  230      public function increaseMemoryLimit($additionalKb)\n  231      {\n  232:         $limit = ini_get('memory_limit');\n  233          if (!strlen($limit) || $limit === '-1') {\n  234              return;\n  ...\n  247  \n  248          if ($units === 'K') {\n  249:             ini_set('memory_limit', ceil($current + $additionalKb) . 'K');\n  250          }\n  251      }\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\cakephp\\debug_kit\\src\\Controller\\ComposerController.php:\n  109          $timeLimit = ini_get('max_execution_time');\n  110          set_time_limit(300);\n  111:         $memoryLimit = ini_get('memory_limit');\n  112:         ini_set('memory_limit', '512M');\n  113  \n  114          $output = new BufferedOutput();\n  ...\n  120          chdir($dir);\n  121          set_time_limit($timeLimit);\n  122:         ini_set('memory_limit', $memoryLimit);\n  123  \n  124          return $output;\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\bin\\composer:\n   41      };\n   42  \n   43:     $memoryLimit = trim(ini_get('memory_limit'));\n   44:     // Increase memory_limit if it is lower than 1.5GB\n   45      if ($memoryLimit != -1 && $memoryInBytes($memoryLimit) < 1024 * 1024 * 1536) {\n   46:         @ini_set('memory_limit', '1536M');\n   47      }\n   48      unset($memoryInBytes, $memoryLimit);\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\doc\\articles\\troubleshooting.md:\n  124  `PHP Fatal error:  Allowed memory size of XXXXXX bytes exhausted <...>`\n  125  \n  126: In this case, the PHP `memory_limit` should be increased.\n  127  \n  128: > **Note:** Composer internally increases the `memory_limit` to `1.5G`.\n  129  \n  130: To get the current `memory_limit` value, run:\n  131  \n  132  ```sh\n  133: php -r \"echo ini_get('memory_limit').PHP_EOL;\"\n  134  ```\n  135  \n  ...\n  139  ```ini\n  140  ; Use -1 for unlimited or define an explicit value like 2G\n  141: memory_limit = -1\n  142  ```\n  143  \n  ...\n  145  \n  146  ```sh\n  147: php -d memory_limit=-1 composer.phar <...>\n  148  ```\n  149  \n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\src\\Composer\\EventDispatcher\\EventDispatcher.php:\n  258          }\n  259  \n  260:         $memoryFlag = ' -d memory_limit='.ini_get('memory_limit');\n  261  \n  262          return ProcessExecutor::escape($phpPath) . $memoryFlag;\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\composer\\composer\\src\\Composer\\XdebugHandler.php:\n  175          }\n  176  \n  177:         $content .= 'memory_limit='.ini_get('memory_limit').PHP_EOL;\n  178  \n  179          if (defined('PHP_WINDOWS_VERSION_BUILD')) {\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\jakub-onderka\\php-console-color\\build.xml:\n   67          <exec executable=\"${phpunit}\">\n   68              <arg line='--configuration ${basedir}/phpunit.xml' />\n   69:             <arg line='-d memory_limit=256M' />\n   70              <arg line='--log-junit \"${basedir}/build/logs/phpunit.xml\"' />\n   71              <arg line='${colors-arg.color}' />\n   ..\n   81          <exec executable=\"${phpunit}\">\n   82              <arg line='--configuration ${basedir}/phpunit.xml' />\n   83:             <arg line='-d memory_limit=256M' />\n   84              <arg line='--log-junit \"${basedir}/build/logs/phpunit.xml\"' />\n   85              <arg line='--coverage-clover \"${basedir}/build/logs/clover.xml\"' />\n\nC:\\wamp64\\www\\SyGAJ\\vendor\\jakub-onderka\\php-console-highlighter\\build.xml:\n   67          <exec executable=\"${phpunit}\">\n   68              <arg line='--configuration ${basedir}/phpunit.xml' />\n   69:             <arg line='-d memory_limit=256M' />\n   70              <arg line='--log-junit \"${basedir}/build/logs/phpunit.xml\"' />\n   71              <arg line='${colors-arg.color}' />\n   ..\n   81          <exec executable=\"${phpunit}\" failonerror=\"true\">\n   82              <arg line='--configuration ${basedir}/phpunit.xml' />\n   83:             <arg line='-d memory_limit=256M' />\n   84              <arg line='--log-junit \"${basedir}/build/logs/phpunit.xml\"' />\n   85              <arg line='--coverage-clover \"${basedir}/build/logs/clover.xml\"' />\n\n25 matches across 10 files\n",
+			"settings":
+			{
+				"buffer_size": 9246,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "logs/debug.log",
+			"settings":
+			{
+				"buffer_size": 206414,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php",
+			"settings":
+			{
+				"buffer_size": 12250,
 				"line_ending": "Unix"
 			}
 		}
@@ -161,8 +196,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "inst",
+		"height": 38.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -214,17 +249,46 @@
 		"/C/wamp64/www/SyGAJ/src",
 		"/C/wamp64/www/SyGAJ/src/Controller",
 		"/C/wamp64/www/SyGAJ/src/Model",
+		"/C/wamp64/www/SyGAJ/src/Model/Entity",
 		"/C/wamp64/www/SyGAJ/src/Model/Table",
 		"/C/wamp64/www/SyGAJ/src/Template",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules",
-		"/C/wamp64/www/SyGAJ/webroot",
-		"/C/wamp64/www/SyGAJ/webroot/js"
+		"/C/wamp64/www/SyGAJ/vendor",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Auth",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element",
+		"/C/wamp64/www/SyGAJ/webroot"
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/SyGAJ/src/Model/Table/AffectationsTable.php",
+		"/C/wamp64/www/SyGAJ/src/Model/Entity/Poule.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/ArticlesController.php",
 		"/C/wamp64/www/SyGAJ/logs/debug.log",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/LogsTable.php",
+		"/C/wamp64/www/SyGAJ/src/Template/Logs/index.ctp",
+		"/C/wamp64/www/SyGAJ/src/Controller/UsersController.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/LogsController.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/InscriptionsController.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/MainController.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/PagesController.php",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php",
+		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Auth/Storage/SessionStorage.php",
+		"/C/wamp64/www/SyGAJ/src/Controller/CandidatsController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules/groups.ctp",
+		"/C/wamp64/www/SyGAJ/src/Template/Poules/print_poules.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-control-sidebar.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside-main-sidebar.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/form.ctp",
+		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
+		"/C/wamp64/www/SyGAJ/src/Model/Table/AffectationsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/PoulesTable.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/PoulesController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Candidats/edit.ctp",
@@ -235,13 +299,11 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Users/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/VillesController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/SaisonsController.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/CandidatsController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Users/edit.ctp",
 		"/C/wamp64/www/SyGAJ/webroot/css/sygaj_theme.css",
 		"/C/wamp64/bin/apache/apache2.4.23/conf/httpd.conf",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Candidats/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Poules/print_poules.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/ClubsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Club.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/CandidatsTable.php",
@@ -258,21 +320,16 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Challenges/index.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/AppController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Login/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Controller/MainController.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/UsersController.php",
 		"/C/wamp64/www/SyGAJ/src/Controller/LoginController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Main/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Controller/PagesController.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Category.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Categorie.php",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/form.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/pdf/default.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Challenge.php",
 		"/C/wamp64/www/SyGAJ/config/routes.php",
 		"/C/wamp64/www/SyGAJ/config/bootstrap.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Affectation.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Poules/not_affected_candidates.ctp",
-		"/C/wamp64/www/SyGAJ/src/Model/Entity/Poule.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Candidat.php",
 		"/C/wamp64/www/SyGAJ/webroot/js/sygaj-ui.js",
 		"/C/wamp64/www/SyGAJ/src/Template/Categories/edit.ctp",
@@ -291,7 +348,6 @@
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/Clubs.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Challenges/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/CommandesTable.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/InscriptionsController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Inscriptions/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/DetailcommandesTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Table/CommandesTable.php",
@@ -316,7 +372,6 @@
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/boxed.ctp",
 		"/C/wamp64/www/SyGAJ/src/Controller/reductionsController.pp",
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/nav-top.ctp",
-		"/C/wamp64/www/SyGAJ/src/Controller/ArticlesController.php",
 		"/C/wamp64/www/SyGAJ/src/Template/Articles/edit.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Articles/add.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Cours/add.ctp",
@@ -333,7 +388,6 @@
 		"/C/wamp64/www/SyGAJ/src/Model/Table/SaisonsTable.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/saison.php",
 		"/C/wamp64/www/SyGAJ/src/Model/Entity/membre.php",
-		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/footer.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Pages/forms/general.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template/Requests/view.ctp",
 		"/C/wamp64/www/SyGAJ/vendor/cakephp/debug_kit/src/Template/Layout/toolbar.ctp",
@@ -341,19 +395,11 @@
 		"/C/wamp64/www/SyGAJ/vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Layout/lockscreen.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Layout/lockscreen.ctp",
 		"/C/wamp64/www/SyGAJ/src/Template/Element/footer.ctp",
-		"/C/wamp64/www/SyGAJ/src/View/Membres/index.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/delete.ctp",
-		"/C/wamp64/www/SyGAJ/src/Template/Users/view.ctp",
-		"/C/Users/bgarcin/AppData/Roaming/Sublime Text 3/Packages/User/snippet_php_echo.sublime-snippet",
-		"/C/wamp64/www/SyGAJ/src/Template/Element/nav-top.ctp",
-		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php",
-		"/C/wamp64/www/SyGAJ/vendor/cakephp/cakephp/src/View/Helper.php",
-		"/C/wamp64/www/SyGAJ/src/Controller/Component/SessionComponent.php",
-		"/C/wamp64/www/SyGAJ/src/Template/Login/add.ctp"
+		"/C/wamp64/www/SyGAJ/src/View/Membres/index.ctp"
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -367,9 +413,25 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"maxMemeClub",
+			"getAva",
+			"memory_limit",
+			"ini_set",
+			"Envoie des données de la poule à supprimer",
+			"Demande",
+			"flash",
+			"Session.timeout",
+			"Client IP:",
+			"load",
+			"function read",
+			"function user",
+			"die()",
+			"die",
+			"Client IP",
+			" style=\"width: 1cm;\"",
 			"to:",
 			"1359",
 			"exportValue",
@@ -515,7 +577,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -524,15 +586,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11697,
+						"buffer_size": 11833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								5
+								1544,
+								1544
 							]
 						],
 						"settings":
@@ -545,7 +607,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -575,7 +637,7 @@
 						"translation.y": 200.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -584,15 +646,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7075,
+						"buffer_size": 7092,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6651,
-								6759
+								146,
+								146
 							]
 						],
 						"settings":
@@ -605,7 +667,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -635,7 +697,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -651,8 +713,8 @@
 						"selection":
 						[
 							[
-								0,
-								3310
+								2572,
+								2572
 							]
 						],
 						"settings":
@@ -661,27 +723,85 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2138.0,
+						"translation.y": 1852.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/Template/Poules/print_poules.ctp",
+					"file": "src/Template/Poules/groups.ctp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21018,
+						"buffer_size": 5790,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								20152,
-								20152
+								2567,
+								2567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Controller/PoulesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3305,
+								3305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2376.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/Template/Poules/print_poules.ctp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2250,
+								2250
 							]
 						],
 						"settings":
@@ -690,37 +810,307 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8899.0,
+						"translation.y": 960.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "vendor/maiconpinto/cakephp-adminlte-theme/src/Template/Element/aside/user-panel.ctp",
+					"buffer": 8,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 602,
+						"buffer_size": 9246,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										171,
+										178
+									],
+									[
+										397,
+										404
+									],
+									[
+										429,
+										436
+									],
+									[
+										479,
+										486
+									],
+									[
+										531,
+										538
+									],
+									[
+										724,
+										731
+									],
+									[
+										950,
+										957
+									],
+									[
+										1051,
+										1058
+									],
+									[
+										1282,
+										1289
+									],
+									[
+										1554,
+										1561
+									],
+									[
+										1586,
+										1593
+									],
+									[
+										1812,
+										1819
+									],
+									[
+										2036,
+										2043
+									],
+									[
+										2358,
+										2365
+									],
+									[
+										2598,
+										2605
+									],
+									[
+										2778,
+										2785
+									],
+									[
+										2958,
+										2965
+									],
+									[
+										3128,
+										3135
+									],
+									[
+										3153,
+										3160
+									],
+									[
+										3413,
+										3420
+									],
+									[
+										3767,
+										3774
+									],
+									[
+										4122,
+										4129
+									],
+									[
+										4184,
+										4191
+									],
+									[
+										4250,
+										4257
+									],
+									[
+										4456,
+										4463
+									],
+									[
+										4662,
+										4674
+									],
+									[
+										4905,
+										4917
+									],
+									[
+										5136,
+										5148
+									],
+									[
+										5341,
+										5353
+									],
+									[
+										5520,
+										5532
+									],
+									[
+										5823,
+										5835
+									],
+									[
+										5863,
+										5875
+									],
+									[
+										6043,
+										6055
+									],
+									[
+										6234,
+										6246
+									],
+									[
+										6274,
+										6286
+									],
+									[
+										6428,
+										6440
+									],
+									[
+										6710,
+										6722
+									],
+									[
+										6807,
+										6819
+									],
+									[
+										6867,
+										6879
+									],
+									[
+										6943,
+										6955
+									],
+									[
+										7080,
+										7092
+									],
+									[
+										7158,
+										7170
+									],
+									[
+										7368,
+										7380
+									],
+									[
+										7392,
+										7404
+									],
+									[
+										7618,
+										7630
+									],
+									[
+										7642,
+										7654
+									],
+									[
+										7956,
+										7968
+									],
+									[
+										8272,
+										8284
+									],
+									[
+										8692,
+										8704
+									],
+									[
+										9027,
+										9039
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4527,
+								4527
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "logs/debug.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 206414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								261,
-								265
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CakePHP (Native)/CakePHP-Template.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11832.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9779,
+								9812
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6160.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
@@ -768,7 +1158,7 @@
 	"project": "SyGAJ.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
